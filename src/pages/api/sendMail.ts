@@ -1,16 +1,5 @@
+import { sendContactMail } from "@/util/mail";
 import { NextApiRequest, NextApiResponse } from "next";
-
-import nodemailer from 'nodemailer';
-
-const transporter = nodemailer.createTransport({
-    host: "mail.novareth.com",
-    port: 465,
-    secure: true,
-    auth: {
-        user: "egely1337@novareth.com",
-        pass: "12345678"
-    }
-})
 
 export default async function handler(req: NextApiRequest, res:NextApiResponse) {
     try{
@@ -20,12 +9,7 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
     
         if(!email || !text) return res.json({status: false, message: "Bir şey yanlış."});
     
-        await transporter.sendMail({
-            from: email,
-            to: "contact@egely1337.com",
-            subject: "A mail from Website",
-            text: text
-        });
+        await sendContactMail(email, text);
 
         res.json({status: true});
     }
