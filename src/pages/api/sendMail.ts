@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
     
         if(!email || !text) return res.json({status: false, message: "Bir şey yanlış."});
     
-        await transporter.sendMail({
+        transporter.sendMail({
             from: email,
             to: "contact@egely1337.com",
             subject: "A mail from Website",
