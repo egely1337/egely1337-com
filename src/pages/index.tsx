@@ -25,6 +25,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import Button from "@/components/button";
 
 import axios from "axios";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
 interface MediaIconProps {
     mediaIcon: IconType,
@@ -63,22 +64,13 @@ interface PinnedRepos {
 }
 
 export default function LandingPage(props: {
-    test: string
+    pinnedRepos: PinnedRepos[]
 }) {
-    const [repos, setRepos] = React.useState<PinnedRepos[]>();
-
     const [contactEmail, setEmail] = React.useState<string>("");
     const [text, setText] = React.useState<string>("");
 
     const [callbackText, setCallbackText] = React.useState<string>("");
-    React.useEffect(() => {
-        const getRepos = async () => {
-            const json = await axios.get("https://gh-pinned-repos.egoist.dev/?username=egely1337").then(res => res.data);
-            setRepos(json);
-        }
 
-        getRepos();
-    }, []);
 
     async function submitMail(e: any) {
         try{
@@ -160,7 +152,7 @@ export default function LandingPage(props: {
                     <div className="w-full h-full flex flex-col lg:p-48 p-4">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Portfolio</span>
                         <Swiper className="w-full h-full">
-                            {repos?.map((value, index) => 
+                            {props.pinnedRepos?.map((value, index) => 
                                 <SwiperSlide key={index} className="w-full h-full">
                                     <Link href={value.link}>
                                         <img src={value.image} className="w-full lg:h-full lg:object-contain" alt="" />
@@ -200,4 +192,14 @@ export default function LandingPage(props: {
             </div>
         </>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async(ctx: GetServerSidePropsContext) => {
+    const json = await axios.get("https://gh-pinned-repos.egoist.dev/?username=egely1337").then(res => res.data);
+
+    return {
+        props: {
+            pinnedRepos: json
+        }
+    }
 }
