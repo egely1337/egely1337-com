@@ -137,19 +137,19 @@ export default function LandingPage(props: {
                     <div className="w-full h-full flex flex-col lg:p-48 p-8">
                             <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">About Me</span>
                             <p className="font-inter text-gray-300 mb-4 lg:text-base text-xs">
-                            My name is Ege. I've been involved in software development since I was 10 years old. I'm currently studying at Sağmalcılar Anatolian High School, and I'm 17 years old, born in 2006. I have a passion for both playing video games and conducting intellectual research. I'm also quite interested in politics and world affairs.
+                            {`My name is Ege. I've been involved in software development since I was 10 years old. I'm currently studying at Sağmalcılar Anatolian High School, and I'm 17 years old, born in 2006. I have a passion for both playing video games and conducting intellectual research. I'm also quite interested in politics and world affairs.`}
                             </p>
                             <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            Throughout my past, I've delved into low-level software, and I even managed to develop an operating system kernel and a game engine. These experiences have enriched my understanding of software development and have been significant milestones in my journey.
+                            {`Throughout my past, I've delved into low-level software, and I even managed to develop an operating system kernel and a game engine. These experiences have enriched my understanding of software development and have been significant milestones in my journey.`}
                             </p>
                             <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            At the moment, I'm actively engaged in creating websites using React libraries. This particular focus allows me to stay current with modern web development trends and contribute to various online projects. My journey in the software world has been an exciting one so far, and I look forward to what the future holds.
+                            {`At the moment, I'm actively engaged in creating websites using React libraries. This particular focus allows me to stay current with modern web development trends and contribute to various online projects. My journey in the software world has been an exciting one so far, and I look forward to what the future holds.`}
                             </p>
                             <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            My journey into the world of software development began at a young age when I discovered my fascination with coding. Over the years, I've honed my skills and deepened my knowledge in various programming languages. This passion has not only been a personal interest but has also driven me to create practical solutions to everyday problems. I'm a firm believer in the power of technology to transform the way we live and work, and I'm excited to be a part of this transformative process.
+                            {`My journey into the world of software development began at a young age when I discovered my fascination with coding. Over the years, I've honed my skills and deepened my knowledge in various programming languages. This passion has not only been a personal interest but has also driven me to create practical solutions to everyday problems. I'm a firm believer in the power of technology to transform the way we live and work, and I'm excited to be a part of this transformative process.`}
                             </p>
                             <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            In addition to my technical pursuits, I'm an avid reader and a critical thinker. I enjoy exploring a wide range of topics, from philosophy to science, which fuels my intellectual curiosity and broadens my perspective. This interdisciplinary approach to learning has not only helped me in my software development endeavors but also in understanding the intricate interplay of various fields, making me a more well-rounded individual.
+                            {`In addition to my technical pursuits, I'm an avid reader and a critical thinker. I enjoy exploring a wide range of topics, from philosophy to science, which fuels my intellectual curiosity and broadens my perspective. This interdisciplinary approach to learning has not only helped me in my software development endeavors but also in understanding the intricate interplay of various fields, making me a more well-rounded individual.`}
                             </p>
                     </div>
                 </div>
@@ -161,7 +161,7 @@ export default function LandingPage(props: {
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Portfolio</span>
                         <Swiper className="w-full h-full">
                             {repos?.map((value, index) => 
-                                <SwiperSlide className="w-full h-full">
+                                <SwiperSlide key={index} className="w-full h-full">
                                     <Link href={value.link}>
                                         <img src={value.image} className="w-full lg:h-full lg:object-contain" alt="" />
                                     </Link>
