@@ -1,27 +1,28 @@
-@tailwind base;
-@tailwind components;
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Nunito:wght@500&family=Poppins&display=swap');
+
 @tailwind utilities;
+@tailwind components;
+@tailwind base;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
+    span {  
+        @apply text-gray-300 font-inter
+    }
+    
+    #__next, body, html {
+        @apply bg-black;
+        scroll-behavior: smooth;
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    .nav-text {
+        @apply
+            text-gray-300
+            font-inter 
+            cursor-pointer
+            text-opacity-80
+            hover:text-opacity-100
+            duration-300
+            ease-in-out;
+            ;;
+    }
 }

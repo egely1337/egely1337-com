@@ -8,12 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        'inter' : 'Inter, sans-serif'
       },
-    },
+      animation: {
+        opacity: 'opacity 0.4s linear'
+      },
+      keyframes: {
+        opacity: {
+          '0%' : {opacity: '0%'},
+          '100%' : {opacity: '100%'}
+        }
+      }
+    }
   },
   plugins: [],
 }
