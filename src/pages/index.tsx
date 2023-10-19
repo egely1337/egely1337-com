@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import Link from "next/link";
 
@@ -7,7 +7,6 @@ import Navbar from "@/components/navbar";
 import MediaIcon from "@/components/media_icon";
 
 import LinkButton from "@/components/link";
-import PortfolioItem from "@/components/portfolio";
 
 import {
     AiOutlineArrowDown
@@ -23,6 +22,10 @@ import { IconType } from "react-icons";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 import Button from "@/components/button";
+
+import {
+    Pagination,
+} from "swiper/modules";
 
 import axios from "axios";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
@@ -149,13 +152,17 @@ export default function LandingPage(props: {
 
             <div id="portfolio" className="relative">
                 <div className="w-full h-[calc(100vh)] top-[9rem]">
-                    <div className="w-full h-full flex flex-col lg:p-48 p-4 items-start justify-start">
+                    <div className="w-full h-full flex flex-col lg:p-48 p-4">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Portfolio</span>
-                        <Swiper className="w-[960px] h-[540px]">
+                        <Swiper
+                            className="w-96 h-96 lg:h-full lg:w-full"
+                            modules={[Pagination]}
+                            pagination={{ clickable: true }}
+                        >
                             {props.pinnedRepos?.map((value, index) => 
-                                <SwiperSlide key={index} className="w-full h-full">
-                                    <Link href={value.link}>
-                                        <img src={value.image} className="w-full lg:h-full lg:object-contain" alt="" />
+                                <SwiperSlide key={index} className="w-full h-1/2">
+                                    <Link href={value.link} className="w-full h-full">
+                                        <img src={value.image} className="w-full h-full object-contain lg:p-8" alt="" />
                                     </Link>
                                 </SwiperSlide>
                             )}
