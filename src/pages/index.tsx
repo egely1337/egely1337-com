@@ -184,6 +184,11 @@ export default function LandingPage(props: {
                             onChange={({target}) => setText(target.value)}
                             className="lg:w-2/4 w-full focus:outline-none px-2 py-2 rounded-md mb-4"
                             placeholder="Message"
+                            onKeyDown={async (e) => {
+                                if(e.key == "Enter" && !e.shiftKey) {
+                                    await submitMail(e);
+                                }
+                            }}
                         />
                         <span className="text-gray-300 font-bold mb-4">{callbackText}</span>
                         <Button className="w-36" text="Send"/>
