@@ -149,9 +149,9 @@ export default function LandingPage(props: {
 
             <div id="portfolio" className="relative">
                 <div className="w-full h-[calc(100vh)] top-[9rem]">
-                    <div className="w-full h-full flex flex-col lg:p-48 p-4">
+                    <div className="w-full h-full flex flex-col lg:p-48 p-4 items-start justify-start">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Portfolio</span>
-                        <Swiper className="w-full h-full">
+                        <Swiper className="w-[960px] h-[540px]">
                             {props.pinnedRepos?.map((value, index) => 
                                 <SwiperSlide key={index} className="w-full h-full">
                                     <Link href={value.link}>

@@ -20,7 +20,7 @@ async function sendContactMail(email: string, text: string) {
         })
     } catch(err) {
         throw err;
-    } 
+    }  
 } 
 
 export {
