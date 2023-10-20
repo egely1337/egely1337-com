@@ -185,7 +185,7 @@ export default function LandingPage(props: {
                             pagination={{ clickable: true }}
                         >
                             {news.map((value, index) => 
-                                <SwiperSlide className="w-full h-full">
+                                <SwiperSlide key={index} className="w-full h-full">
                                     <Blog className="w-full h-full" key={index} link={value.link} title={value.title} img={value.img}/>
                                 </SwiperSlide>
                             )}
