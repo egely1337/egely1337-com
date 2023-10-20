@@ -14,5 +14,9 @@
     {
         "href": "#contact",
         "text": "Contact"
+    },
+    {
+        "href": "#blogs",
+        "text": "Blogs"
     }
 ]

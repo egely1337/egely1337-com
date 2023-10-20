@@ -23,6 +23,8 @@ import {Swiper, SwiperSlide} from "swiper/react";
 
 import Button from "@/components/button";
 
+import Blog from "@/components/blog";
+
 import {
     Pagination,
 } from "swiper/modules";
@@ -53,6 +55,8 @@ const Links: MediaIconProps[] = [
         tooltipText: "GitHub"
     }
 ]
+
+import news from "@/configs/news.json";
 
 interface PinnedRepos {
     owner: string,
@@ -164,6 +168,25 @@ export default function LandingPage(props: {
                                     <Link href={value.link} className="w-full h-full">
                                         <img src={value.image} className="w-full h-full object-contain lg:p-8" alt="" />
                                     </Link>
+                                </SwiperSlide>
+                            )}
+                        </Swiper>
+                    </div>
+                </div>
+            </div>
+
+            <div id="blogs" className="relative">
+                <div className="w-full h-[calc(100vh)] top-[9rem]">
+                    <div className="w-full h-full flex flex-col lg:p-48 p-4">
+                        <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Blogs</span>
+                        <Swiper
+                            className="w-96 h-96 lg:h-full lg:w-full"
+                            modules={[Pagination]}
+                            pagination={{ clickable: true }}
+                        >
+                            {news.map((value, index) => 
+                                <SwiperSlide className="w-full h-full">
+                                    <Blog className="w-full h-full" key={index} link={value.link} title={value.title} img={value.img}/>
                                 </SwiperSlide>
                             )}
                         </Swiper>
