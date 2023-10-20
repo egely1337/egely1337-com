@@ -45,7 +45,7 @@ export default function Page(){
                     {`Israeli Defence Minister Yoav Gallant said on Friday that achieving Israel's objectives would not be quick or easy.`}
                 </p>
 
-                <span className="text-opacity-80 mt-8">{`Edited on: 10/20/2023 8:51 PM`}</span>
+                <span className="text-opacity-80 mt-8">{`Edited on: 10/20/2023 9:27 PM`}</span>
             </NewsLayout>
         </>
     )
