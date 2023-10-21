@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
         if(!captcha) return res.json({status: false, message: "Verify captcha."})
 
         const json = await axios.post("https://www.google.com/recaptcha/api/siteverify", null, {
-            params: {
+            params: { 
                 secret: process.env.CAPTCHA_SECRET,
                 response: captcha
             }
