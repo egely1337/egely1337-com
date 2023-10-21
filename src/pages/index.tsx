@@ -94,9 +94,9 @@ export default function LandingPage(props: {
 
             //@ts-ignore
             if(res.status) {
-                setCallbackText("Successfully sent the E-mail.");
+                setCallbackText(res.message);
             } else {
-                setCallbackText("Something gone wrong.");
+                setCallbackText(res.message);
             }
         } catch(err) {
 
@@ -226,7 +226,7 @@ export default function LandingPage(props: {
                         />
 
                         <RECaptcha
-                            sitekey="6Lc2N7soAAAAAEIAZu9iaxf0Mr33o40rsC67Nu9c"
+                            sitekey="6LerPbsoAAAAAAvCuSIIuBj6ArHjUHiCTaQ23lIH"
                             onChange={(token) => setToken(token ?? "fuck you")}
                         />
                         <span className="text-gray-300 font-bold mb-4">{callbackText}</span>
