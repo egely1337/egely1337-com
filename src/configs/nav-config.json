@@ -8,15 +8,11 @@
         "text": "About"
     },
     {
-        "href": "#portfolio",
-        "text": "Portfolio"
+        "href": "#blogs",
+        "text": "Blogs"
     },
     {
         "href": "#contact",
         "text": "Contact"
-    },
-    {
-        "href": "#blogs",
-        "text": "Blogs"
     }
 ]

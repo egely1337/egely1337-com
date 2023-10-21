@@ -25,6 +25,27 @@
             ease-in-out;
             ;;
     }
+
+    .news-title {
+        @apply 
+        font-bold text-2xl lg:text-3xl mb-4;
+    }
+
+    .news-author {
+        @apply 
+        text-opacity-80 text-sm mb-4;
+    }
+
+    .news-img {
+        @apply 
+        rounded-md w-full lg:w-3/5;
+    }
+
+    .news-bottom {
+        @apply
+            text-opacity-80 mt-8;
+
+    }
 }
 
 

@@ -8,6 +8,8 @@ import MediaIcon from "@/components/media_icon";
 
 import LinkButton from "@/components/link";
 
+import RECaptcha from 'react-google-recaptcha'
+
 import {
     AiOutlineArrowDown
 } from 'react-icons/ai';
@@ -75,6 +77,7 @@ export default function LandingPage(props: {
 }) {
     const [contactEmail, setEmail] = React.useState<string>("");
     const [text, setText] = React.useState<string>("");
+    const [captchaToken, setToken] = React.useState<string>("");
 
     const [callbackText, setCallbackText] = React.useState<string>("");
 
@@ -85,7 +88,8 @@ export default function LandingPage(props: {
 
             const res = await axios.post("/api/sendMail", {
                 email: contactEmail,
-                text: text
+                text: text,
+                captcha: captchaToken
             }).then(res => res.data);
 
             //@ts-ignore
@@ -118,7 +122,7 @@ export default function LandingPage(props: {
                             </div>  
                             <span className="text-6xl font-bold font-inter mb-4">Hi there, I am</span>
                             <span className="text-4xl font-thin font-inter mb-8">egely</span>
-                            <LinkButton className="lg:w-48 w-36" href="/#about" text="About Me"/>
+                            <LinkButton className="lg:w-48 w-36" href="/#about" text="Read More"/>
                         </div>
                         <div className="lg:w-1/2 w-full lg:h-full hidden p-16 lg:flex flex-col justify-end items-end">
                             {/* TODO */}
@@ -154,7 +158,7 @@ export default function LandingPage(props: {
                 </div>
             </div>
 
-            <div id="portfolio" className="relative">
+            {/*<div id="portfolio" className="relative">
                 <div className="w-full h-[calc(100vh)] top-[9rem]">
                     <div className="w-full h-full flex flex-col lg:p-48 p-4">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Portfolio</span>
@@ -173,11 +177,11 @@ export default function LandingPage(props: {
                         </Swiper>
                     </div>
                 </div>
-            </div>
+            </div>*/}
 
             <div id="blogs" className="relative">
                 <div className="w-full h-[calc(100vh)] top-[9rem]">
-                    <div className="w-full h-full flex flex-col lg:p-48 p-4">
+                    <div className="w-full h-full flex flex-col lg:p-36 p-4">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Blogs</span>
                         <Swiper
                             className="w-96 h-96 lg:h-full lg:w-full"
@@ -212,13 +216,18 @@ export default function LandingPage(props: {
                         <textarea name="message" id="message" cols={30} rows={30}
                             value={text}
                             onChange={({target}) => setText(target.value)}
-                            className="lg:w-2/4 w-full focus:outline-none px-2 py-2 rounded-md mb-4"
+                            className="lg:w-2/4 h-5/6 block w-full focus:outline-none px-2 py-2 rounded-md mb-4"
                             placeholder="Message"
                             onKeyDown={async (e) => {
                                 if(e.key == "Enter" && !e.shiftKey) {
                                     await submitMail(e);
                                 }
                             }}
+                        />
+
+                        <RECaptcha
+                            sitekey="6Lc2N7soAAAAAEIAZu9iaxf0Mr33o40rsC67Nu9c"
+                            onChange={(token) => setToken(token ?? "fuck you")}
                         />
                         <span className="text-gray-300 font-bold mb-4">{callbackText}</span>
                         <Button className="w-36" text="Send"/>

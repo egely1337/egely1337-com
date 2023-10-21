@@ -11,7 +11,7 @@ export default function Navbar(props: {
         <>
             <nav className="w-full h-36 p-16 flex">
                 <div className="w-full h-full flex flex-row sm:justify-start justify-center items-center gap-5">
-                    <span className="font-bold sm:text-4xl text-2xl mr-4">egely</span>
+                    <Link href={"/"} className="font-bold text-gray-300 font-inter sm:text-4xl text-2xl mr-4">egely</Link>
                     {nav_config.map((value, index) => 
                         <Link className="nav-text sm:text-base text-xs" key={index} href={value.href}>{value.text}</Link>
                     )}
