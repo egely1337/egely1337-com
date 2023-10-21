@@ -3,8 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
-import Infobox from "@/components/info-box";
-
 
 export default function Page(){
     return(
