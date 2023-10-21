@@ -59,6 +59,7 @@ const Links: MediaIconProps[] = [
 ]
 
 import news from "@/configs/news.json";
+import Head from "next/head";
 
 interface PinnedRepos {
     owner: string,
@@ -105,6 +106,12 @@ export default function LandingPage(props: {
 
     return(
         <>
+            <Head>
+                <title>egely1337</title>
+                <meta property="og:title" content="Hello! That's me, egely1337!" />
+                <meta property="og:description" content="You can read my blogs and learn about my biography."/>
+            </Head>
+
             <Navbar />
             <div className="relative">
                 <div className="w-full h-[calc(100vh-9rem)] top-[9rem]">

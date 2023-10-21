@@ -1,4 +1,5 @@
 import NewsLayout from "@/components/news_layout";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
@@ -6,6 +7,10 @@ import React from "react";
 export default function Page(){
     return(
         <>
+            <Head>
+                <title>Developing Your Operating System - egely1337</title>
+            </Head>
+
             <NewsLayout>
                 <span className="news-title">
                     {`How to develop a Operating System Kernel`}
