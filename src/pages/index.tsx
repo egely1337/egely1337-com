@@ -115,7 +115,7 @@ export default function LandingPage(props: {
             <Navbar />
             <div className="relative">
                 <div className="w-full h-[calc(100vh-9rem)] top-[9rem]">
-                    <div className="w-full h-full flex lg:flex-row flex-col">
+                    <div className="w-full h-full flex lg:flex-row flex-col relative">
                         <div className="lg:w-1/2 w-full h-full lg:p-48 p-12 flex flex-col">
                             <div className="flex flex-row items-center mb-4 gap-4">
                                 {Links.map((value, index) => 
@@ -134,7 +134,7 @@ export default function LandingPage(props: {
                         <div className="lg:w-1/2 w-full lg:h-full hidden p-16 lg:flex flex-col justify-end items-end">
                             {/* TODO */}
                         </div>
-                    </div>
+                    </div>   
                 </div>
 
                 <Link href={"/#about"}>
@@ -165,27 +165,6 @@ export default function LandingPage(props: {
                 </div>
             </div>
 
-            {/*<div id="portfolio" className="relative">
-                <div className="w-full h-[calc(100vh)] top-[9rem]">
-                    <div className="w-full h-full flex flex-col lg:p-48 p-4">
-                        <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Portfolio</span>
-                        <Swiper
-                            className="w-96 h-96 lg:h-full lg:w-full"
-                            modules={[Pagination]}
-                            pagination={{ clickable: true }}
-                        >
-                            {props.pinnedRepos?.map((value, index) => 
-                                <SwiperSlide key={index} className="w-full h-1/2">
-                                    <Link href={value.link} className="w-full h-full">
-                                        <img src={value.image} className="w-full h-full object-contain lg:p-8" alt="" />
-                                    </Link>
-                                </SwiperSlide>
-                            )}
-                        </Swiper>
-                    </div>
-                </div>
-            </div>*/}
-
             <div id="blogs" className="relative">
                 <div className="w-full h-[calc(100vh)] top-[9rem]">
                     <div className="w-full h-full flex flex-col lg:p-36 p-4">
@@ -207,7 +186,7 @@ export default function LandingPage(props: {
 
             <div id="contact" className="relative">
                 <div className="w-full h-[calc(100vh)] top-[9rem]">
-                    <form onSubmit={submitMail} className="w-full h-full flex flex-col lg:p-48 p-8">
+                    <form onSubmit={submitMail} className="w-full flex flex-col lg:p-48 p-8">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Contact Me</span>
 
                         <span className="text-xl font-bold font-inter mb-2">Your E-Mail</span>
@@ -220,10 +199,10 @@ export default function LandingPage(props: {
                         />
 
                         <span className="text-xl font-bold font-inter mb-2">Message</span>
-                        <textarea name="message" id="message" cols={30} rows={30}
+                        <textarea name="message" id="message" cols={10} rows={30}
                             value={text}
                             onChange={({target}) => setText(target.value)}
-                            className="lg:w-2/4 h-5/6 block w-full focus:outline-none px-2 py-2 rounded-md mb-4"
+                            className="lg:w-2/4 h-1/6 block w-full focus:outline-none px-2 py-2 rounded-md mb-4"
                             placeholder="Message"
                             onKeyDown={async (e) => {
                                 if(e.key == "Enter" && !e.shiftKey) {
@@ -246,11 +225,11 @@ export default function LandingPage(props: {
 }
 
 export const getServerSideProps: GetServerSideProps = async(ctx: GetServerSidePropsContext) => {
-    const json = await axios.get("https://gh-pinned-repos.egoist.dev/?username=egely1337").then(res => res.data);
-
     return {
         props: {
-            pinnedRepos: json
+
         }
     }
+
+    // fuck you.
 }
