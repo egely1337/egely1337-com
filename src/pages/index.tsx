@@ -110,8 +110,8 @@ export default function LandingPage(props: {
         <>
             <Head>
                 <title>egely1337</title>
-                <meta property="og:title" content="Hello! That's me, egely1337!" />
-                <meta property="og:description" content="You can read my blogs and learn about my biography."/>
+                <meta property="og:title" content="hello buddie this is egely!" />
+                <meta property="og:description" content="click for learn about me (im not a scammer lol)"/>
             </Head>
 
             <Navbar />
@@ -144,7 +144,7 @@ export default function LandingPage(props: {
                     </div>   
                     <img 
                         src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f0018a2-8560-4f86-b6ed-ce255489220d/dfta1it-fc942fb7-7288-4c67-8292-5416cb99624b.png/v1/fill/w_806,h_992/makima_from_chainsaw_man___png_render_by_xanccount_dfta1it-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU3NSIsInBhdGgiOiJcL2ZcLzVmMDAxOGEyLTg1NjAtNGY4Ni1iNmVkLWNlMjU1NDg5MjIwZFwvZGZ0YTFpdC1mYzk0MmZiNy03Mjg4LTRjNjctODI5Mi01NDE2Y2I5OTYyNGIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GJ0jDRmmtIUCU6SEbvoaCR8a9ufZOP6qawxFw7eNJU4" 
-                        className="absolute right-0 bottom-0 lg:w-[512px] w-[312px] text-white"
+                        className="absolute right-0 bottom-0 lg:w-[512px] w-[240px] text-white"
                     />
                 </div>
 
@@ -196,6 +196,7 @@ export default function LandingPage(props: {
                                     title={val.title}
                                     img={val.img}    
                                     link={val.link}
+                                    key={index}
                                 />
                             })}
                         </div>
