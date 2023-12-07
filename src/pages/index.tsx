@@ -174,7 +174,7 @@ export default function LandingPage(props: {
                             {`In addition to my technical pursuits, I'm an avid reader and a critical thinker. I enjoy exploring a wide range of topics, from philosophy to science, which fuels my intellectual curiosity and broadens my perspective. This interdisciplinary approach to learning has not only helped me in my software development endeavors but also in understanding the intricate interplay of various fields, making me a more well-rounded individual.`}
                             </p>
                         </div>
-                        <div className="flex flex-col lg:w-1/2 w-full">
+                        <div className="flex flex-col lg:w-1/2 w-full lg:mt-0 mt-6">
                             <span 
                                 className="lg:text-6xl text-4xl font-bold font-inter lg:ml-48 tracking-wider text-opacity-80"
                             >{`also, i interested on anime`}</span>
