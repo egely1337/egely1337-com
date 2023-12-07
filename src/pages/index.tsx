@@ -18,6 +18,7 @@ import {
     FaInstagram,
     FaTwitter,
     FaGithub,
+    FaArrowRight,
 } from 'react-icons/fa'
 import { IconType } from "react-icons";
 
@@ -129,7 +130,12 @@ export default function LandingPage(props: {
                             </div>  
                             <span className="text-6xl font-bold font-inter mb-4">Hi there, I am</span>
                             <span className="text-4xl font-thin font-inter mb-8">egely</span>
-                            <LinkButton className="lg:w-48 w-36" href="/#about" text="Read More"/>
+                            <LinkButton
+                                className="lg:w-48 w-36" 
+                                href="/#about" 
+                                text="Read More"
+                                icon={FaArrowRight}
+                            />
                         </div>
                         <div className="lg:w-1/2 w-full lg:h-full hidden p-16 lg:flex flex-col justify-end items-end">
                             {/* TODO */}
