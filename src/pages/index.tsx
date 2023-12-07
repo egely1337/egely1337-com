@@ -114,7 +114,7 @@ export default function LandingPage(props: {
 
             <Navbar />
             <div className="relative">
-                <div className="w-full h-[calc(100vh-9rem)] top-[9rem]">
+                <div className="w-full min-h-[calc(100vh-9rem)] top-[9rem]">
                     <div className="w-full h-full flex lg:flex-row flex-col relative">
                         <div className="lg:w-1/2 w-full h-full lg:p-48 p-12 flex flex-col">
                             <div className="flex flex-row items-center mb-4 gap-4">
@@ -135,6 +135,10 @@ export default function LandingPage(props: {
                             {/* TODO */}
                         </div>
                     </div>   
+                    <img 
+                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f0018a2-8560-4f86-b6ed-ce255489220d/dfta1it-fc942fb7-7288-4c67-8292-5416cb99624b.png/v1/fill/w_806,h_992/makima_from_chainsaw_man___png_render_by_xanccount_dfta1it-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU3NSIsInBhdGgiOiJcL2ZcLzVmMDAxOGEyLTg1NjAtNGY4Ni1iNmVkLWNlMjU1NDg5MjIwZFwvZGZ0YTFpdC1mYzk0MmZiNy03Mjg4LTRjNjctODI5Mi01NDE2Y2I5OTYyNGIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GJ0jDRmmtIUCU6SEbvoaCR8a9ufZOP6qawxFw7eNJU4" 
+                        className="absolute right-0 bottom-0 w-[512px] text-white"
+                    />
                 </div>
 
                 <Link href={"/#about"}>
@@ -143,7 +147,7 @@ export default function LandingPage(props: {
             </div>
 
             <div id="about" className="relative">
-                <div className="w-full h-[calc(100vh)] top-[9rem]">
+                <div className="w-full min-h-[calc(100vh)] top-[9rem]">
                     <div className="w-full h-full flex flex-col lg:p-48 p-8">
                             <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">About Me</span>
                             <p className="font-inter text-gray-300 mb-4 lg:text-base text-xs">
@@ -166,7 +170,7 @@ export default function LandingPage(props: {
             </div>
 
             <div id="blogs" className="relative">
-                <div className="w-full h-[calc(100vh)] top-[9rem]">
+                <div className="w-full min-h-[calc(100vh)] top-[9rem]">
                     <div className="w-full h-full flex flex-col lg:p-36 p-4">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Blogs</span>
                         <Swiper
