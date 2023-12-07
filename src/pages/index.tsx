@@ -17,20 +17,11 @@ import {
 import {
     FaInstagram,
     FaTwitter,
-    FaGithub,
-    FaArrowRight,
+    FaGithub
 } from 'react-icons/fa'
 import { IconType } from "react-icons";
 
-import {Swiper, SwiperSlide} from "swiper/react";
-
 import Button from "@/components/button";
-
-import Blog from "@/components/blog";
-
-import {
-    Pagination,
-} from "swiper/modules";
 
 import axios from "axios";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
@@ -182,23 +173,6 @@ export default function LandingPage(props: {
                                 src="cutie.png" 
                                 className="w-[700px] mt-8 lg:self-end self-center"
                             />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="blogs" className="relative">
-                <div className="w-full top-[9rem]">
-                    <div className="w-full lg:p-36 p-4 overflow-auto overflow-x-hidden">
-                        <div className="w-full flex flex-col items-center">
-                            {news.map((val, index) => {
-                                return <Blog
-                                    title={val.title}
-                                    img={val.img}    
-                                    link={val.link}
-                                    key={index}
-                                />
-                            })}
                         </div>
                     </div>
                 </div>

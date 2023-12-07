@@ -8,6 +8,10 @@
         "text": "about"
     },
     {
+        "href": "/blogs",
+        "text": "blogs"
+    },
+    {
         "href": "#contact",
         "text": "contact"
     }
