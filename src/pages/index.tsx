@@ -61,6 +61,7 @@ const Links: MediaIconProps[] = [
 
 import news from "@/configs/news.json";
 import Head from "next/head";
+import { IoBook } from "react-icons/io5";
 
 interface PinnedRepos {
     owner: string,
@@ -128,13 +129,13 @@ export default function LandingPage(props: {
                                     />
                                 )}
                             </div>  
-                            <span className="text-6xl font-bold font-inter mb-4">Hi there, I am</span>
-                            <span className="text-4xl font-thin font-inter mb-8">egely</span>
+                            <span className="text-6xl font-bold font-inter mb-4">{`hello buddie 🫂`}</span>
+                            <span className="text-3xl font-thin font-inter mb-8">people call me <strong className="font-bold">egely</strong></span>
                             <LinkButton
                                 className="lg:w-48 w-36" 
                                 href="/#about" 
-                                text="Read More"
-                                icon={FaArrowRight}
+                                text="learn more"
+                                icon={IoBook}
                             />
                         </div>
                         <div className="lg:w-1/2 w-full lg:h-full hidden p-16 lg:flex flex-col justify-end items-end">
@@ -154,8 +155,9 @@ export default function LandingPage(props: {
 
             <div id="about" className="relative">
                 <div className="w-full min-h-[calc(100vh)] top-[9rem]">
-                    <div className="w-full h-full flex flex-col lg:p-48 p-8">
-                            <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">About Me</span>
+                    <div className="w-full h-full flex lg:flex-row flex-col lg:p-48 p-8">
+                        <div className="flex flex-col lg:w-1/2 w-full">
+                            <span className="lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest">about</span>
                             <p className="font-inter text-gray-300 mb-4 lg:text-base text-xs">
                             {`My name is Ege. I've been involved in software development since I was 10 years old. I'm currently studying at Sağmalcılar Anatolian High School, and I'm 17 years old, born in 2006. I have a passion for both playing video games and conducting intellectual research. I'm also quite interested in politics and world affairs.`}
                             </p>
@@ -171,25 +173,32 @@ export default function LandingPage(props: {
                             <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
                             {`In addition to my technical pursuits, I'm an avid reader and a critical thinker. I enjoy exploring a wide range of topics, from philosophy to science, which fuels my intellectual curiosity and broadens my perspective. This interdisciplinary approach to learning has not only helped me in my software development endeavors but also in understanding the intricate interplay of various fields, making me a more well-rounded individual.`}
                             </p>
+                        </div>
+                        <div className="flex flex-col lg:w-1/2 w-full">
+                            <span 
+                                className="lg:text-6xl text-4xl font-bold font-inter lg:ml-48 tracking-wider text-opacity-80"
+                            >{`also, i interested on anime`}</span>
+                            <img   
+                                src="cutie.png" 
+                                className="w-[700px] mt-8 lg:self-end self-center"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div id="blogs" className="relative">
-                <div className="w-full min-h-[calc(100vh)] top-[9rem]">
-                    <div className="w-full h-full flex flex-col lg:p-36 p-4">
-                        <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Blogs</span>
-                        <Swiper
-                            className="w-full h-full lg:h-screen lg:w-full"
-                            modules={[Pagination]}
-                            pagination={{ clickable: true }}
-                        >
-                            {news.map((value, index) => 
-                                <SwiperSlide key={index} className="w-full h-full">
-                                    <Blog className="w-full h-full" key={index} link={value.link} title={value.title} img={value.img}/>
-                                </SwiperSlide>
-                            )}
-                        </Swiper>
+                <div className="w-full top-[9rem]">
+                    <div className="w-full lg:p-36 p-4 overflow-auto overflow-x-hidden">
+                        <div className="w-full flex flex-col items-center">
+                            {news.map((val, index) => {
+                                return <Blog
+                                    title={val.title}
+                                    img={val.img}    
+                                    link={val.link}
+                                />
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -197,23 +206,23 @@ export default function LandingPage(props: {
             <div id="contact" className="relative">
                 <div className="w-full h-[calc(100vh)] top-[9rem]">
                     <form onSubmit={submitMail} className="w-full flex flex-col lg:p-48 p-8">
-                        <span className="lg:text-6xl text-4xl font-bold font-inter mb-12">Contact Me</span>
+                        <span className="lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest">contact</span>
 
-                        <span className="text-xl font-bold font-inter mb-2">Your E-Mail</span>
+                        <span className="text-xl font-bold font-inter mb-2 tracking-widest">email</span>
                         <input 
                             value={contactEmail}
                             onChange={({target}) => setEmail(target.value)}
                             type="text"
-                            className="lg:w-1/4 w-full py-1.5 px-3 border-[1px] rounded-md focus:outline-none mb-6"
-                            placeholder="Your E-mail"
+                            className="lg:w-[612px] w-full py-2 px-3 border-[1px] rounded-md focus:outline-none mb-6"
+                            placeholder="type here weirdo"
                         />
 
-                        <span className="text-xl font-bold font-inter mb-2">Message</span>
+                        <span className="text-xl font-bold font-inter tracking-widest mb-2 mt-2">message</span>
                         <textarea name="message" id="message"
                             value={text}
                             onChange={({target}) => setText(target.value)}
                             className="h-[340px] lg:w-[612px] block w-full focus:outline-none px-2 py-2 rounded-md mb-4"
-                            placeholder="Message"
+                            placeholder="do not insult me 🙏"
                             onKeyDown={async (e) => {
                                 if(e.key == "Enter" && !e.shiftKey) {
                                     await submitMail(e);
