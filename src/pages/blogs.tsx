@@ -17,18 +17,16 @@ export default function Page(props: {
             </Head>
             <Navbar/>
             <div id="blogs" className="relative">
-                <div className="w-full h-min-[100vh-9rem] top-[9rem]">
-                    <div className="w-full p-4">
-                        <div className="w-full grid lg:grid-cols-2 grid-rows-1">
-                            {news.map((val, index) => {
-                                return <Blog
-                                    title={val.title}
-                                    img={val.img}    
-                                    link={val.link}
-                                    key={index}
-                                />
-                            })}
-                        </div>
+                <div className="h-min-[100vh-9rem] top-[9rem] flex justify-center">
+                    <div className="grid lg:grid-cols-2 grid-rows-1">
+                        {news.map((val, index) => {
+                            return <Blog
+                                title={val.title}
+                                img={val.img}    
+                                link={val.link}
+                                key={index}
+                            />
+                        })}
                     </div>
                 </div>
             </div>
