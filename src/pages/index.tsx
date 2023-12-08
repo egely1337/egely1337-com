@@ -168,7 +168,7 @@ export default function LandingPage(props: {
                             >{`also, i am interested on anime`}</span>
                             <img   
                                 src="cutie.png" 
-                                className={`w-auto mt-8 self-center duration-[3s] ${inView ? "animate-bounce" : "opacity-0"}`}
+                                className={`w-auto mt-8 self-center duration-[3s] ${inView ? "translate-y-0" : "opacity-0 -translate-y-10"}`}
                             />
                         </div>
                     </div>
