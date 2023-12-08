@@ -10,8 +10,11 @@ import LinkButton from "@/components/link";
 
 import RECaptcha from 'react-google-recaptcha'
 
+import { useInView } from "react-intersection-observer";
+import { useAnimation, motion} from "framer-motion";
+
 import {
-    AiOutlineArrowDown
+    AiOutlineArrowDown, AiOutlineMessage
 } from 'react-icons/ai';
 
 import {
@@ -50,7 +53,7 @@ const Links: MediaIconProps[] = [
     }
 ]
 
-import news from "@/configs/news.json";
+import TypewriterComponent from "typewriter-effect";
 import Head from "next/head";
 import { IoBook } from "react-icons/io5";
 
@@ -75,6 +78,7 @@ export default function LandingPage(props: {
 
     const [callbackText, setCallbackText] = React.useState<string>("");
 
+    const [ref, inView] = useInView();
 
     async function submitMail(e: any) {
         try{
@@ -149,29 +153,27 @@ export default function LandingPage(props: {
                     <div className="w-full h-full flex lg:flex-row flex-col lg:p-48 p-8">
                         <div className="flex flex-col lg:w-1/2 w-full">
                             <span className="lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest">about</span>
-                            <p className="font-inter text-gray-300 mb-4 lg:text-base text-xs">
-                            {`My name is Ege. I've been involved in software development since I was 10 years old. I'm currently studying at Sağmalcılar Anatolian High School, and I'm 17 years old, born in 2006. I have a passion for both playing video games and conducting intellectual research. I'm also quite interested in politics and world affairs.`}
-                            </p>
-                            <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            {`Throughout my past, I've delved into low-level software, and I even managed to develop an operating system kernel and a game engine. These experiences have enriched my understanding of software development and have been significant milestones in my journey.`}
-                            </p>
-                            <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            {`At the moment, I'm actively engaged in creating websites using React libraries. This particular focus allows me to stay current with modern web development trends and contribute to various online projects. My journey in the software world has been an exciting one so far, and I look forward to what the future holds.`}
-                            </p>
-                            <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            {`My journey into the world of software development began at a young age when I discovered my fascination with coding. Over the years, I've honed my skills and deepened my knowledge in various programming languages. This passion has not only been a personal interest but has also driven me to create practical solutions to everyday problems. I'm a firm believer in the power of technology to transform the way we live and work, and I'm excited to be a part of this transformative process.`}
-                            </p>
-                            <p className="font-inter text-gray-300 mb-2 lg:text-base text-xs">
-                            {`In addition to my technical pursuits, I'm an avid reader and a critical thinker. I enjoy exploring a wide range of topics, from philosophy to science, which fuels my intellectual curiosity and broadens my perspective. This interdisciplinary approach to learning has not only helped me in my software development endeavors but also in understanding the intricate interplay of various fields, making me a more well-rounded individual.`}
-                            </p>
+                            <TypewriterComponent
+                                onInit={(typeWriter) => {
+                                    typeWriter
+                                    .changeDelay(30)
+                                    .typeString("hiiiii! my name's ege-chan! i, like, totally got into software stuff when i was just 10 years old, nya! right now, i'm, like, studying at anatolian high school, teehee! i'm 17, born in 2006, uwu! i'm, like, super passionate about gaming and doing smartie-pants research, desu! and, ohh, i'm kinda into politics and, like, world things too, nya! ♡＾▽＾♡ <br/><br/>")
+                                    .start()
+                                    .typeString("in my past adventures, i totally dived into low-level software shenanigans, and guess what? i actually whipped up an operating system kernel and a game engine, nya! these experiences totally juiced up my grasp of software stuff and were like, major checkpoints in my journey! (*≧ω≦) <br/>")
+                                    .start()
+                                    .typeString("at the moment, i'm like, totally into creating websites using react libraries, teehee! this specific focus helps me keep up with all the hip and happening trends in modern web development and contribute to tons of online projects, nya! my journey in the software world has been, like, super thrilling, and i can't wait to see what the future's got in store! (*＾▽＾)／ <br/><br/>")
+                                    .start()
+                                    .typeString("ohh, besides all my techy stuff, i'm, like, a total bookworm and super into thinking about stuff, nya! i love diving into all sorts of topics, from deep philosophy to mind-boggling science, which totally fires up my brain and makes me see things in a whole new way, teehee! this mix-and-match learning style hasn't just helped me in my software quests but also in, like, grokking how different fields dance together, making me a more, like, well-rounded peep! ＼(≧▽≦)／")
+                                }}
+                            />
                         </div>
-                        <div className="flex flex-col lg:w-1/2 w-full lg:mt-0 mt-6">
+                        <div ref={ref} className={`flex flex-col lg:w-1/2 w-full lg:mt-0 mt-6`}>
                             <span 
-                                className="lg:text-6xl text-4xl font-bold font-inter lg:ml-48 tracking-wider text-opacity-80"
-                            >{`also, i interested on anime`}</span>
+                                className="lg:text-7xl z-20 text-4xl font-bold font-inter lg:ml-48 tracking-wider text-opacity-80"
+                            >{`also, i am interested on anime`}</span>
                             <img   
                                 src="cutie.png" 
-                                className="w-[700px] mt-8 lg:self-end self-center"
+                                className={`w-auto mt-8 self-center duration-[3s] ${inView ? "animate-bounce" : "opacity-0"}`}
                             />
                         </div>
                     </div>
@@ -210,7 +212,11 @@ export default function LandingPage(props: {
                             onChange={(token) => setToken(token ?? "fuck you")}
                         />
                         <span className="text-gray-300 font-bold mb-4">{callbackText}</span>
-                        <Button className="w-36" text="Send"/>
+                        <Button
+                            className="w-36" 
+                            text="Send"
+                            icon={AiOutlineMessage}
+                        />
                     </form>
                 </div>
             </div>
@@ -225,5 +231,5 @@ export const getServerSideProps: GetServerSideProps = async(ctx: GetServerSidePr
         }
     }
 
-    // fuck you.
+    // fuck you. :))
 }
