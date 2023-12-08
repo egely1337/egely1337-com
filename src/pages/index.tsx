@@ -1,17 +1,15 @@
 import React from "react";
 
 import Link from "next/link";
-
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
 import Navbar from "@/components/navbar";
 import MediaIcon from "@/components/media_icon";
-
 import LinkButton from "@/components/link";
+import Button from "@/components/button";
 
 import RECaptcha from 'react-google-recaptcha'
-
 import { useInView } from "react-intersection-observer";
-import { useAnimation, motion} from "framer-motion";
 
 import {
     AiOutlineArrowDown, AiOutlineMessage
@@ -24,10 +22,7 @@ import {
 } from 'react-icons/fa'
 import { IconType } from "react-icons";
 
-import Button from "@/components/button";
-
 import axios from "axios";
-import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
 interface MediaIconProps {
     mediaIcon: IconType,
@@ -181,8 +176,8 @@ export default function LandingPage(props: {
             </div>
 
             <div id="contact" className="relative">
-                <div className="w-full h-[calc(100vh)] top-[9rem]">
-                    <form onSubmit={submitMail} className="w-full flex flex-col lg:p-48 p-8">
+                <div className="w-full h-[calc(100vh)] top-[9rem] flex lg:flex-row flex-col">
+                    <form onSubmit={submitMail} className="w-full lg:w-2/4 flex flex-col lg:p-48 p-8">
                         <span className="lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest">contact</span>
 
                         <span className="text-xl font-bold font-inter mb-2 tracking-widest">email</span>
@@ -218,6 +213,12 @@ export default function LandingPage(props: {
                             icon={AiOutlineMessage}
                         />
                     </form>
+                    <div className="hidden lg:w-2/4 lg:flex items-center justify-center">
+                        <img 
+                            src="https://i.pinimg.com/originals/29/90/69/299069ebd9915dd74773ef46a65519ae.gif" 
+                            alt="" 
+                        />
+                    </div>
                 </div>
             </div>
         </>
