@@ -147,7 +147,7 @@ export default function LandingPage(props: {
                 <div className="w-full min-h-[calc(100vh)] top-[9rem]">
                     <div className="w-full h-full flex lg:flex-row flex-col lg:p-48 p-8">
                         <div className="flex flex-col lg:w-1/2 w-full">
-                            <span className="lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest">about</span>
+                            <span className={`lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest`}>about</span>
                             <TypewriterComponent
                                 onInit={(typeWriter) => {
                                     typeWriter
@@ -164,7 +164,7 @@ export default function LandingPage(props: {
                         </div>
                         <div ref={ref} className={`flex flex-col lg:w-1/2 w-full lg:mt-0 mt-6`}>
                             <span 
-                                className="lg:text-7xl z-20 text-4xl font-bold font-inter lg:ml-48 tracking-wider text-opacity-80"
+                                className={`lg:text-7xl z-20 text-4xl font-bold font-inter lg:ml-48 tracking-wider text-opacity-80 duration-[1s] ${inView ? "translate-y-0" : "opacity-0 -translate-y-10"}`}
                             >{`also, i am interested on anime`}</span>
                             <img   
                                 src="cutie.png" 
