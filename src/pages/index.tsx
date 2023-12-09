@@ -74,6 +74,7 @@ export default function LandingPage(props: {
     const [callbackText, setCallbackText] = React.useState<string>("");
 
     const [ref, inView] = useInView();
+    const [contactRef, contactInView] = useInView();
 
     async function submitMail(e: any) {
         try{
@@ -176,24 +177,24 @@ export default function LandingPage(props: {
             </div>
 
             <div id="contact" className="relative">
-                <div className="w-full h-[calc(100vh)] top-[9rem] flex lg:flex-row flex-col">
-                    <form onSubmit={submitMail} className="w-full lg:w-2/4 flex flex-col lg:p-48 p-8">
-                        <span className="lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest">contact</span>
+                <div className="w-full overflow-hidden h-[calc(100vh)] top-[9rem] flex lg:flex-row flex-col">
+                    <form ref={contactRef} onSubmit={submitMail} className="w-full lg:w-2/4 flex flex-col lg:p-48 p-8">
+                        <span className={`lg:text-6xl text-4xl font-bold font-inter mb-12 tracking-widest duration-[1s] ${contactInView ? "" : "-translate-x-[10000px]"}`}>contact</span>
 
-                        <span className="text-xl font-bold font-inter mb-2 tracking-widest">email</span>
+                        <span className={`text-xl font-bold font-inter mb-2 tracking-widest duration-[2s] ${contactInView ? "" : "-translate-x-[10000px]"}`}>email</span>
                         <input 
                             value={contactEmail}
                             onChange={({target}) => setEmail(target.value)}
                             type="text"
-                            className="lg:w-[612px] w-full py-2 px-3 border-[1px] rounded-md focus:outline-none mb-6"
+                            className={`lg:w-[612px] w-full py-2 px-3 border-[1px] rounded-md focus:outline-none ease-out mb-6 duration-[2s] ${contactInView ? "" : "-translate-x-[10000px]"} `}
                             placeholder="type here weirdo"
                         />
 
-                        <span className="text-xl font-bold font-inter tracking-widest mb-2 mt-2">message</span>
+                        <span className={`duration-[2s] ease-in-out ${contactInView ? "" : "-translate-x-[10000px]"} text-xl font-bold font-inter tracking-widest mb-2 mt-2`}>message</span>
                         <textarea name="message" id="message"
                             value={text}
                             onChange={({target}) => setText(target.value)}
-                            className="h-[340px] lg:w-[612px] block w-full focus:outline-none px-2 py-2 rounded-md mb-4"
+                            className={`h-[340px] lg:w-[612px] block w-full focus:outline-none px-2 py-2 rounded-md mb-4 duration-[2s] ${contactInView ? "" : "-translate-x-[10000px]"} `}
                             placeholder="do not insult me 🙏"
                             onKeyDown={async (e) => {
                                 if(e.key == "Enter" && !e.shiftKey) {
