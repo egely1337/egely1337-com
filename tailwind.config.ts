@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         'inter' : 'Inter, sans-serif',
-        'script' : 'Style Script, sans-serif'
+        'script' : 'Style Script, sans-serif',
+        'poppins' : 'Poppins, sans-serif'
       },
       animation: {
         opacity: 'opacity 0.4s linear'

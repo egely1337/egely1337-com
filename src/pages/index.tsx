@@ -168,7 +168,7 @@ export default function LandingPage(props: {
                             >{`also, i am interested on anime`}</span>
                             <img   
                                 src="cutie.png" 
-                                className={`w-auto mt-8 self-center duration-[3s] ${inView ? "translate-y-0" : "opacity-0 -translate-y-10"}`}
+                                className={`w-auto mt-8 self-center duration-[1s] ${inView ? "translate-y-0" : "opacity-0 -translate-y-10"}`}
                             />
                         </div>
                     </div>
@@ -223,14 +223,4 @@ export default function LandingPage(props: {
             </div>
         </>
     )
-}
-
-export const getServerSideProps: GetServerSideProps = async(ctx: GetServerSidePropsContext) => {
-    return {
-        props: {
-
-        }
-    }
-
-    // fuck you. :))
 }
