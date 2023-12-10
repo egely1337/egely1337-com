@@ -210,7 +210,7 @@ export default function LandingPage(props: {
                         />
                         <span className="text-gray-300 font-bold mb-4">{callbackText}</span>
                         <Button
-                            className={`w-36 duration-[3.5s] ${contactInView ? "opacity-100 -translate-y-[20px]" : "opacity-0"}`} 
+                            className={`w-36`} 
                             text="Send"
                             icon={AiOutlineMessage}
                         />
