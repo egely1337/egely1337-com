@@ -55,7 +55,8 @@ export default function Page(props: {
             </div>
 
             <NewsParagraph
-                text="Fikir ve konuşma bir suç değildir, Suç olmamalıdır."
+                text=
+                "Fikir ve konuşma bir suç değildir, Suç olmamalıdır. İfade özgürlüğü ve nefret farklı kavramlardır. İfade özgürlüğü bir insanın ırkına veya ten rengine hakaret etmek değildir. O insanlar bunu doğarken kendileri istemediler. Ancak ideolojiler, cinsel tercihler (homofobik değilim kaldı ki modern dünyada cinsel tercihler de ideolojidir) veya siyasi fikirler insanın kendi seçtiği şeylerdir. İstediğim gibi fikrimi ifade edebilme hakkına sahip olmalıyım."
             />
         </NewsLayout>
     )
