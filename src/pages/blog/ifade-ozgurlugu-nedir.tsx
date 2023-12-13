@@ -58,6 +58,23 @@ export default function Page(props: {
                 text=
                 "Fikir ve konuşma bir suç değildir, Suç olmamalıdır. İfade özgürlüğü ve nefret farklı kavramlardır. İfade özgürlüğü bir insanın ırkına veya ten rengine hakaret etmek değildir. O insanlar bunu doğarken kendileri istemediler. Ancak ideolojiler, cinsel tercihler (homofobik değilim kaldı ki modern dünyada cinsel tercihler de ideolojidir) veya siyasi fikirler insanın kendi seçtiği şeylerdir. İstediğim gibi fikrimi ifade edebilme hakkına sahip olmalıyım."
             />
+
+            <NewsParagraph
+                text="İnsanların fikrine ve haklarına saygı duyup korumalıyız. Otoriter liderler bugüne kadar sürekli demokrasi ile yükselmişlerdir. Halk buna müsaade ettiği için de istediklerini rahat rahat yapmışlardır. Örneğin Hitler, demokrasi ile geldi. Halk destekledi, otoritesini daha da sağlamlaştırdı. Almanya'daki Hitlere karşı muhalifler Hitler bazı muhalif gruplarını otoritesi ile temizlerken kendilerine dokunmuyor diye sesini çıkarmadılar."
+            />
+
+            <img 
+                src="https://www.healthworldnews.net/wp-content/uploads/2021/04/Kapp-Cephesi-400x225.jpg"
+                className="mt-4 news-img"
+            />
+
+            <NewsParagraph
+                text={`Bu durum için bir söz vardır "Naziler komünistler için geldiğinde sesimi çıkarmadım; çünkü komünist değildim.
+                Sosyal demokratları içeri tıktıklarında sesimi çıkarmadım; çünkü sosyal demokrat değildim.
+                Sonra sendikacılar için geldiler, bir şey söylemedim; çünkü sendikacı değildim.
+                Sonra Yahudiler için geldiler, sesimi çıkarmadım, çünkü Yahudi değildim.
+                Benim için geldiklerinde, sesini çıkaracak kimse kalmamıştı." -Martin Niemöller-`}
+            />
         </NewsLayout>
     )
 }
