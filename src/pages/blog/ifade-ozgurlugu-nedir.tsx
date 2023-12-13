@@ -75,6 +75,10 @@ export default function Page(props: {
                 Sonra Yahudiler için geldiler, sesimi çıkarmadım, çünkü Yahudi değildim.
                 Benim için geldiklerinde, sesini çıkaracak kimse kalmamıştı." -Martin Niemöller-`}
             />
+
+            <NewsParagraph
+                text="Kısaca fikiri desteklemesiniz bile, insanların haklarını savunun. Demokrasi ve özgürlüğü savunun. Bu size kadar gelmeden o adaletsizliğe karşı çıkın."
+            />
         </NewsLayout>
     )
 }
