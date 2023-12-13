@@ -77,7 +77,7 @@ export default function Page(props: {
             />
 
             <NewsParagraph
-                text="Kısaca fikiri desteklemesiniz bile, insanların haklarını savunun. Demokrasi ve özgürlüğü savunun. Bu size kadar gelmeden o adaletsizliğe karşı çıkın."
+                text="İnsanlarin fikirlerini desteklemeseniz bile insanların haklarını savunun. Demokrasi ve özgürlüğü savunun. Karşı çıkın ki bir gün ipin ucu size geldiği zaman sizi de savunacak insanlar olabilsin."
             />
         </NewsLayout>
     )
