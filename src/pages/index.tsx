@@ -1,7 +1,7 @@
 import React from "react";
 
 import Link from "next/link";
-import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import { useRouter } from "next/router";
 
 import Navbar from "@/components/navbar";
 import MediaIcon from "@/components/media_icon";
@@ -20,11 +20,13 @@ import {
     FaTwitter,
     FaGithub
 } from 'react-icons/fa'
+import { SiMyanimelist } from "react-icons/si";
+
 import { IconType } from "react-icons";
 
 import axios from "axios";
 
-interface MediaIconProps {
+type MediaIconProps = {
     mediaIcon: IconType,
     href: string,
     tooltipText: string
@@ -45,6 +47,11 @@ const Links: MediaIconProps[] = [
         href: "https://github.com/egely1337",
         mediaIcon: FaGithub,
         tooltipText: "GitHub"
+    },
+    {
+        href: "https://myanimelist.net/profile/egely1337",
+        mediaIcon: SiMyanimelist,
+        tooltipText: "My Anime List"
     }
 ]
 
@@ -67,6 +74,8 @@ interface PinnedRepos {
 export default function LandingPage(props: {
     pinnedRepos: PinnedRepos[]
 }) {
+    const router = useRouter();
+
     const [contactEmail, setEmail] = React.useState<string>("");
     const [text, setText] = React.useState<string>("");
     const [captchaToken, setToken] = React.useState<string>("");
@@ -91,6 +100,9 @@ export default function LandingPage(props: {
                 setCallbackText(res.message);
             } else {
                 setCallbackText(res.message);
+                setTimeout(() => {
+                    router.reload();
+                }, 1000);
             }
         } catch(err) {
 
