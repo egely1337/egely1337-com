@@ -112,7 +112,7 @@ export default function LandingPage(props: {
     return(
         <>
             <Head>
-                <title>egely1337</title>
+                <title>egely - home</title>
                 <meta property="og:title" content="hello buddie this is egely!" />
                 <meta property="og:description" content="click for learn about me (im not a scammer lol)"/>
             </Head>
