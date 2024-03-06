@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer';
 
+const DELIVERY_EMAIL = "contact@egely.me";
+
 const transporter = nodemailer.createTransport({
     host: "mail.novareth.com",
     port: 465,
@@ -14,7 +16,7 @@ async function sendContactMail(email: string, text: string) {
     try {
         await transporter.sendMail({
             from: email,
-            to: "contact@egely1337.com",
+            to: DELIVERY_EMAIL,
             subject: "Contact from egely1337.com",
             text: text,
         })
