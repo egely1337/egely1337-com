@@ -3,5 +3,10 @@
         "title" : "İfade Özgürlüğü Nedir?",
         "img" : "https://i.redd.it/d504ls491fpb1.jpg",
         "link": "/blog/ifade-ozgurlugu-nedir"
+    },
+    {
+        "title" : "İnternet ve Özgürlük",
+        "img" : "https://miro.medium.com/v2/resize:fit:950/1*XU6U7ehpU6BDsK7-AnUkTA.jpeg",
+        "link": "/blog/internet-ve-ozgurluk"
     }
 ]
