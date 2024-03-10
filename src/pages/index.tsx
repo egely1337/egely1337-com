@@ -34,12 +34,12 @@ type MediaIconProps = {
 
 const Links: MediaIconProps[] = [
     {
-        href: "https://instagram.com/egely1337",
+        href: "https://instagram.com/egely48",
         mediaIcon: FaInstagram,
         tooltipText: "Instagram"
     },
     {
-        href: "https://twitter.com/egely1337",
+        href: "https://twitter.com/egely48",
         mediaIcon: FaTwitter,
         tooltipText: "Twitter"
     },
