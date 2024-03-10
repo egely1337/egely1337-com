@@ -1,5 +1,6 @@
 import NewsParagraph from "@/components/news-paragraph";
 import NewsLayout from "@/components/news_layout";
+import { Head } from "next/document";
 import React from "react";
 
 
@@ -8,6 +9,12 @@ export default function Page(props: {
 }) {
     return (
         <>
+            <Head>
+                <meta
+                    property="og:image"
+                    content={`https://miro.medium.com/v2/resize:fit:950/1*XU6U7ehpU6BDsK7-AnUkTA.jpeg`}
+                />
+            </Head>
             <NewsLayout
                 title="İfade Özgürlüğü Nedir?"
                 author="egely1337"

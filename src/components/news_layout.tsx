@@ -16,15 +16,15 @@ export default function NewsLayout(ChildComponentProps: ChildComponentProps) {
         <>
             <Head>
                 <meta
-                    name="author"
+                    property="og:author"
                     content={ChildComponentProps.author}
                 />
                 <meta
-                    name="description"
+                    property="og:description"
                     content={ChildComponentProps.title}
                 />
                 <meta
-                    name="author"
+                    property="og:author"
                     content={ChildComponentProps.author}
                 />
             </Head>
