@@ -1,6 +1,6 @@
 import NewsParagraph from "@/components/news-paragraph";
 import NewsLayout from "@/components/news_layout";
-import { Head } from "next/document";
+import Head from "next/head";
 import React from "react";
 
 
