@@ -15,6 +15,7 @@ export default function NewsLayout(ChildComponentProps: ChildComponentProps) {
     return(
         <>
             <Head>
+                <title>{ChildComponentProps.author} - {ChildComponentProps.title}</title>
                 <meta
                     property="og:author"
                     content={ChildComponentProps.author}
