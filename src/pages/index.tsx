@@ -30,7 +30,7 @@ export default function Page() {
                     <Link href={`https://instagram.com/egely48`}>Instagram</Link>
                     <Link href={`https://x.com/egely48`}>Twitter</Link>
                     <Link href={`https://github.com/egely1337`}>Github</Link>
-                    <Link href={`https://github.com/egely1337`}>Blog</Link>
+                    <Link href={`/#NOT_IMPLEMENTED`}>Blog</Link>
                 </div>
 
 
