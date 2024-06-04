@@ -8,11 +8,11 @@
 
 @layer components {
     span {  
-        @apply text-gray-300 font-inter
+        @apply text-black
     }
     
     #__next, body, html {
-        @apply bg-black;
+        @apply bg-white;
         scroll-behavior: smooth;
     }
 
