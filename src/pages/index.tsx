@@ -6,12 +6,17 @@ import React from "react";
 
 
 export default function Page() {
-    const personality = "Hi, I'm Ege. As a person who doesn't like to talk much, I'll be brief. I'm of legal age, interested in software and politics. I spent most of my life in software. I don't regret it either. I have experience in C, C++, C#, Python, Javascript, Typescript languages and Web, OpenGL. In my free time I like to do difficult things from scratch. Sometimes I act toxic and sometimes normal. We are all human after all. Sometimes I watch anime, usually romantic anime. Am I ashamed of it? Yes. Anyway, you can see my social media and internet links below. You can reach me from there. By the way, if you noticed, the site is very simple; Yes, I like simplicity. Have a good day!!!";
+    const paragraphs: string[] = 
+    ["Hi, I'm Ege. As a person who doesn't like to talk much, I'll be brief. I'm of legal age, interested in software and politics. I spent most of my life in software. I don't regret it either. I have experience in C, C++, C#, Python, Javascript, Typescript languages and Web, OpenGL. In my free time I like to do difficult things from scratch. Sometimes I act toxic and sometimes normal. We are all human after all. Sometimes I watch anime, usually romantic anime. Am I ashamed of it? Yes. Anyway, you can see my social media and internet links below. You can reach me from there. By the way, \
+    if you noticed, the site is very simple; Yes, I like simplicity. Have a good day!!!",
+
+    "On the political compass, I see myself as libertarian center-left. I don't usually put it like that, I call myself a direct democrat.  I find laissez-faire, freedom of speech, participatory democracy right. In software, I support and contribute to free software. "
+    ];
 
     return(
         <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
             <Head>
-                <title>egely.me</title>
+                <title>egely.me | Home</title>
             </Head>
             
             
@@ -19,18 +24,24 @@ export default function Page() {
                 <div className="header flex flex-col mb-4">
                     <span className="font-mono text-2xl">egely</span>
                     <span className="font-mono text-xs mt-1">{'Date' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                    <span className="font-mono text-xs">{'Subject' + ": " + 'Biography'}</span>
+                    <span className="font-mono text-xs">{'Subject: Biography'}</span>
                 </div>
 
-                <p className="font-mono">
-                    {personality}
-                </p>
+                <div className="flex flex-col gap-8">
+                    {paragraphs.map((val, i) => 
+                        <p key={i} className="font-mono">
+                            {val}
+                        </p>
+                    )}
+                </div>
 
-                <div className="flex justify-between underline font-mono gap-2 mt-8">
-                    <Link href={`https://instagram.com/egely48`}>Instagram</Link>
-                    <Link href={`https://x.com/egely48`}>Twitter</Link>
-                    <Link href={`https://github.com/egely1337`}>Github</Link>
-                    <Link href={`/#NOT_IMPLEMENTED`}>Blog</Link>
+
+                <div className="flex justify-between underline font-mono gap-2 mt-8 sm:text-base text-xs">
+                    <Link href={`https://instagram.com/egely48`}>📷 Instagram</Link>
+                    <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
+                    <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
+                    <Link href={`/#NOT_IMPLEMENTED`}>📔 Blog</Link>
+                    <Link href={`/gallery`}>🖼️ Gallery</Link>
                 </div>
 
 
