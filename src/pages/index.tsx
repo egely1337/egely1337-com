@@ -1,3 +1,4 @@
+import Grid from "@/components/grid";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
@@ -14,38 +15,40 @@ export default function Page() {
     ];
 
     return(
-        <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
-            <Head>
-                <title>egely.me | Home</title>
-            </Head>
-            
-            
-            <div className="lg:w-1/2 flex flex-col p-4">
-                <div className="header flex flex-col mb-4">
-                    <span className="font-mono text-2xl">egely</span>
-                    <span className="font-mono text-xs mt-1">{'Date' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                    <span className="font-mono text-xs">{'Subject: Biography'}</span>
+        <>
+            <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
+                <Head>
+                    <title>egely.me | Home</title>
+                </Head>
+                
+                <div className="lg:w-1/2 flex flex-col p-4">
+                    <div className="header flex flex-col mb-4">
+                        <span className="font-mono text-2xl font-bold">egely</span>
+                        <span className="font-mono text-xs mt-1">{'date' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
+                        <span className="font-mono text-xs">{'subject: biography'}</span>
+                    </div>
+
+                    <div className="flex flex-col gap-8">
+                        {paragraphs.map((val, i) => 
+                            <p key={i} className="font-mono">
+                                {val}
+                            </p>
+                        )}
+                    </div>
+
+
+                    <div className="flex justify-between underline font-mono gap-2 mt-8 sm:text-base text-xs">
+                        <Link href={`https://instagram.com/egely48`}>📷 Instagram</Link>
+                        <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
+                        <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
+                        <Link href={`/gallery`}>🖼️ Gallery</Link>
+                    </div>
+
+
                 </div>
 
-                <div className="flex flex-col gap-8">
-                    {paragraphs.map((val, i) => 
-                        <p key={i} className="font-mono">
-                            {val}
-                        </p>
-                    )}
-                </div>
-
-
-                <div className="flex justify-between underline font-mono gap-2 mt-8 sm:text-base text-xs">
-                    <Link href={`https://instagram.com/egely48`}>📷 Instagram</Link>
-                    <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
-                    <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
-                    <Link href={`/#NOT_IMPLEMENTED`}>📔 Blog</Link>
-                    <Link href={`/gallery`}>🖼️ Gallery</Link>
-                </div>
-
-
+                <Grid/>
             </div>
-        </div>
+        </>
     )
 }

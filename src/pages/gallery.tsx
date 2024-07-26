@@ -1,11 +1,9 @@
+import Grid from "@/components/grid";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import React from "react";
 
 
 export default function Page() {
-    const router = useRouter();
-    
+
     const images: string[] = [
         "https://images7.alphacoders.com/959/959381.jpg",
         "https://i.pinimg.com/originals/3d/71/b1/3d71b17404a32bb6a770b67d32735f97.jpg",
@@ -24,14 +22,16 @@ export default function Page() {
 
             <div className="lg:w-1/2 flex flex-col p-4">
                 <div className="header flex flex-col mb-4">
-                    <span className="font-mono text-2xl">gallery</span>
-                    <span className="font-mono text-xs mt-1">{'Date' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                    <span className="font-mono text-xs">{'Subject: Gallery'}</span>
+                    <span className="font-mono text-2xl font-bold">gallery</span>
+                    <span className="font-mono text-xs mt-1">{'date' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
+                    <span className="font-mono text-xs">{'subject: gallery'}</span>
                 </div>
                 <div className="grid grid-cols-1 gap-2">
                     {images.map((val, i) => <img src={val} className="w-full h-full object-cover" key={i}/>)}
                 </div>
             </div>
+
+            <Grid/>
         </div>
     )
 }
