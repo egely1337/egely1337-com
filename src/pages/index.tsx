@@ -1,4 +1,5 @@
 import Grid from "@/components/grid";
+import InfoBox from "@/components/info";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
@@ -43,6 +44,11 @@ export default function Page() {
                         <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
                         <Link href={`/gallery`}>🖼️ Gallery</Link>
                     </div>
+
+                    <InfoBox
+                        href="mailto:contact@egely.me"
+                        text="Contact me if you want to work animeswatch.com project."
+                    />
 
 
                 </div>
