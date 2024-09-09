@@ -47,7 +47,7 @@ export default function Page() {
 
                     <InfoBox
                         href="mailto:contact@egely.me"
-                        text="Contact me if you want to work animeswatch.com project."
+                        text="Click here to contact if you want to work with animeswatch.com project."
                     />
 
 
