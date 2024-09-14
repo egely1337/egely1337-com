@@ -28,7 +28,7 @@ export default function Page(props: {
                 </div>
             </div>
 
-            <div className="lg:w-1/2 flex flex-col p-4">
+            <div className="lg:w-1/2 flex flex-col p-4 gap-5">
                 {props.posts.map((val) => {
                     return(
                         <div key={val.title} className="flex flex-col font-mono items-start border-b pb-5">
