@@ -48,7 +48,7 @@ export default function Page(props: {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const posts = await getPosts();
     return {
         props: {
