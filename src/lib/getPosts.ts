@@ -3,8 +3,15 @@ import matter from "gray-matter";
 import path from "path";
 
 
+interface IPost {
+    title: string,
+    date: string,
+    content: string,
+    id: string,
+    author: string
+}
 
-export async function getPosts() {
+export async function getPosts(): Promise<IPost[]> {
     return new Promise((resolve, reject) => {
         const postsDirectory = path.join(process.cwd(), 'posts');
         const fileNames = fs.readdirSync(postsDirectory);
@@ -23,6 +30,7 @@ export async function getPosts() {
             }
         })
 
+        //@ts-ignore
         resolve((allPostsData.sort((a, b) => {
             //@ts-ignore
             if(a.date < b.date) return 1;

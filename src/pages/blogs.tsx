@@ -1,6 +1,7 @@
 import Grid from "@/components/grid";
 import { getPosts } from "@/lib/getPosts";
 import Head from 'next/head';
+import Link from "next/link";
 import Markdown from 'react-markdown'
 
 export default function Page(props: {
@@ -36,7 +37,7 @@ export default function Page(props: {
                             <Markdown  className={'mt-1 break-words markdown'}>
                                 {val.content.slice(0, 300)}
                             </Markdown>
-                            <button onClick={() => alert('daha implemente etmedim.')} className="text-blue-800 underline">daha fazlasını oku...</button>
+                            <Link href={`/blog/${val.id}`} className="text-blue-800 underline">daha fazlasını oku...</Link>
                         </div>
                     )
                 })}

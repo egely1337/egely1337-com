@@ -38,7 +38,7 @@ export default function Page() {
                     </div>
 
 
-                    <div className="flex justify-between underline font-mono gap-2 mt-8 sm:text-base text-xs">
+                    <div className="flex sm:flex-1 flex-col justify-between underline font-mono gap-2 mt-8 sm:text-base text-xs">
                         <Link href={`https://instagram.com/egely48`}>📷 Instagram</Link>
                         <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
                         <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
