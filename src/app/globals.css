@@ -6,58 +6,7 @@
 @tailwind components;
 @tailwind base;
 
-@layer components {
-    span {  
-        @apply text-black
-    }
-    
-    #__next, body, html {
-        scroll-behavior: smooth;
-    }
 
-    .nav-text {
-        @apply
-            text-gray-300
-            font-poppins
-            cursor-pointer
-            text-opacity-80
-            hover:text-opacity-100
-            duration-300
-            ease-in-out;
-            ;;
-    }
-
-    .news-title {
-        @apply 
-        font-bold text-2xl lg:text-3xl mb-4;
-    }
-
-    .news-author {
-        @apply 
-        text-opacity-80 text-sm mb-4;
-    }
-
-    .news-img {
-        @apply 
-        rounded-md w-full lg:w-3/5;
-    }
-
-    .news-bottom {
-        @apply
-            text-opacity-80 mt-8;
-
-    }
-}
-
-
-* {
-    --swiper-pagination-color: rgb(209 213 219);
-    --swiper-pagination-bullet-size: 8px;
-    --swiper-pagination-bullet-width: 8px;
-    --swiper-pagination-bullet-height: 8px;
-    --swiper-pagination-bullet-inactive-color: #282828f5;
-    --swiper-pagination-bullet-inactive-opacity: 0.5;
-    --swiper-pagination-bullet-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 4px;
-    --swiper-pagination-bullet-vertical-gap: 6px;
+.markdown > * {
+    all: revert;
 }

@@ -43,6 +43,7 @@ export default function Page() {
                         <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
                         <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
                         <Link href={`/gallery`}>🖼️ Gallery</Link>
+                        <Link href={`/blogs`}>📝 Blogs</Link>
                     </div>
 
                     <InfoBox
