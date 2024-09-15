@@ -17,3 +17,5 @@ arada filmler izlerim, daha çok indie korku filmlerini falan seviyorum, büyük
 politik düşüncem olursa da uzatmadan sadece "demokratım" derim. herkesin görüşüne saygım hiç olmadı "tahammülüm" var. herkesin fikrini özgürce konuşabildiği, demokrasinin "sandıktan ibaret" olmayan halini destekliyorum.
 
 onun dışında bu kadar. yazılım alanında ortaklık veya yardım isterseniz contact@egely.me adresime yazabilirsiniz. iyi günler!
+
+![](image.png)
