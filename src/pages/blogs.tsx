@@ -1,5 +1,6 @@
 import Grid from "@/components/grid";
 import { getPosts } from "@/lib/getPosts";
+import getText from "@/lib/getText";
 import Head from 'next/head';
 import Link from "next/link";
 import Markdown from 'react-markdown'
@@ -35,8 +36,7 @@ export default function Page(props: {
                             <h1 className="text-2xl font-bold">{val.title}<span className="font-normal text-sm"> {"·"} {val.date}</span></h1>
                             <span className="text-sm">{'@' +val.author}</span>
                             <Markdown  className={'mt-1 break-words markdown'}>
-                                {val.content.slice(0, 300)}
-                                {Number(val.content.length > 300) ? '...': '.'}
+                                {getText(val.content)}
                             </Markdown>
                             <Link href={`/blog/${val.id}`} className="text-blue-800 underline">daha fazlasını oku...</Link>
                         </div>
