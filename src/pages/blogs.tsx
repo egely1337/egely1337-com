@@ -36,6 +36,7 @@ export default function Page(props: {
                             <span className="text-sm">{'@' +val.author}</span>
                             <Markdown  className={'mt-1 break-words markdown'}>
                                 {val.content.slice(0, 300)}
+                                {Number(val.content.length > 300) ? '...': '.'}
                             </Markdown>
                             <Link href={`/blog/${val.id}`} className="text-blue-800 underline">daha fazlasını oku...</Link>
                         </div>
