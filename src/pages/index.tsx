@@ -37,13 +37,14 @@ export default function Page() {
                         )}
                     </div>
 
-
-                    <div className="flex sm:flex-row sm:items-start items-center flex-col justify-between underline font-mono gap-2 mt-8 sm:text-base text-xs">
-                        <Link href={`https://instagram.com/egely48`}>📷 Instagram</Link>
-                        <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
-                        <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
-                        <Link href={`/gallery`}>🖼️ Gallery</Link>
-                        <Link href={`/blogs`}>📝 Blogs</Link>
+                    <div className="w-full flex justify-center lg:items-center mt-8">
+                        <div className="w-full grid lg:grid-cols-5 sm:grid-cols-4 grid-cols-3 underline font-mono gap-12 sm:text-base text-xs">
+                            <Link href={`https://instagram.com/egely48`}>📷 Instagram</Link>
+                            <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
+                            <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
+                            <Link href={`/gallery`}>🖼️ Gallery</Link>
+                            <Link href={`/blogs`}>📝 Blogs</Link>
+                        </div>
                     </div>
 
                     <InfoBox
