@@ -4,6 +4,7 @@ date: '2024-09-15'
 author: 'egely'
 ---
 
+
 merhaba, öncelikle ismimi söylememle başlamam gerekiyor sanırım. benim adım ege, belirli bir yaştan daha büyüğüm. meraklı bir insanım. bilgisayar bilimiyle, politikayla ve ilginç filmler izlemeyi severim.
 
 yazılıma ilgim 7-8 sene önce başladı. çok oyun oynuyordum ve oyun geliştirmeye çok hevesliydim. ilk girişimimi unity ve monodevelop kurarak üstüne de youtube'dan bir kaç türkçe video izleyerek başladım. bir şeyler geliştirmek, oluşturmak beni çok eğlendiriyordu, özellikle sevdiğim alanda.
@@ -18,4 +19,4 @@ politik düşüncem olursa da uzatmadan sadece "demokratım" derim. herkesin gö
 
 onun dışında bu kadar. yazılım alanında ortaklık veya yardım isterseniz contact@egely.me adresime yazabilirsiniz. iyi günler!
 
-![](image.png)
+![](https://images5.alphacoders.com/123/1239848.jpg)
