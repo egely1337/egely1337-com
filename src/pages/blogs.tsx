@@ -33,8 +33,8 @@ export default function Page(props: {
                 {props.posts.map((val) => {
                     return(
                         <div key={val.title} className="flex flex-col font-mono items-start border-b pb-5">
-                            <h1 className="text-2xl font-bold">{val.title}<span className="font-normal text-sm"> {"·"} {val.date}</span></h1>
-                            <span className="text-sm">{'@' +val.author}</span>
+                            <h1 className="text-2xl font-bold">{val.title}<span className="font-normal text-sm"></span></h1>
+                            <span className="text-sm">{'@' +val.author + '·' + ' ' + val.date}</span>
                             <Markdown  className={'mt-1 break-words markdown'}>
                                 {getText(val.content)}
                             </Markdown>

@@ -30,7 +30,8 @@ export default function Page(props: {
                     <div className="lg:w-1/2 flex flex-col p-4">
                         <div className="header flex flex-col mb-4">
                             <span className="font-mono text-2xl font-bold">{props.post.title}</span>
-                            <span className="font-mono text-xs">{`author: ${props.post.author} · ${props.post.date}`}</span>
+                            <span className="font-mono text-xs mt-1">{'date' + ': ' + props.post.date}</span>
+                            <span className="font-mono text-xs">{`author: ${props.post.author}`}</span>
 
                             <Markdown className={`markdown font-mono`}>{props.post.content}</Markdown>
                         </div>
