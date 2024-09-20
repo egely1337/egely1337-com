@@ -1,4 +1,5 @@
 import Grid from "@/components/grid";
+import KernelPanic from "@/components/kernel-panic";
 import { getPosts } from "@/lib/getPosts";
 import Head from "next/head";
 import Markdown from "react-markdown";
@@ -14,12 +15,15 @@ export default function Page(props: {
 }) {
 
     if (!props.post) {
-        return <p>Loading...</p>; // Handle cases where data is undefined
+        return(
+            <KernelPanic/>
+        )
     } else {
         return(
             <>
                 <Head>
-                    <title>egely.me | Home</title>
+                    {props.post && <title>egely.me | Loading</title>}
+                    {props.post && <title>egely.me | {props.post.title}</title>}
                 </Head>
                 <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
                     
@@ -62,7 +66,9 @@ export async function getStaticProps({ params }: {params: {id: any}}) {
 
     if(!post) {
         return {
-            notFound: true
+            props: {
+                post: null
+            }
         }
     }
 

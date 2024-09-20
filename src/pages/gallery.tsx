@@ -30,6 +30,7 @@ export default function Page() {
                     {images.map((val, i) => <img src={val} className="w-full h-full object-cover" key={i}/>)}
                 </div>
             </div>
+            
 
             <Grid/>
         </div>
