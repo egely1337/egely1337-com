@@ -3,6 +3,7 @@ import KernelPanic from "@/components/kernel-panic";
 import { getPosts } from "@/lib/getPosts";
 import Head from "next/head";
 import Markdown from "react-markdown";
+import { NextSeo } from "next-seo";
 
 export default function Page(props: {
     post: {
@@ -11,7 +12,8 @@ export default function Page(props: {
         content: string,
         id: string,
         author: string
-    } 
+    },
+    banner_image: string
 }) {
 
     if (!props.post) {
@@ -21,10 +23,20 @@ export default function Page(props: {
     } else {
         return(
             <>
-                <Head>
-                    {props.post && <title>egely.me | Loading</title>}
-                    {props.post && <title>egely.me | {props.post.title}</title>}
-                </Head>
+                <NextSeo
+                    title={`egely.me | ${props.post.title}`}
+                    description={props.post.content.slice(0, 120) + '...'}
+                    openGraph={{
+                        images: (props.banner_image) ? [{
+                            url: props.banner_image,
+                            width: 1920,
+                            height: 1080,
+                            alt: "banner"
+                        }] : [],
+                        title: `egely.me | ${props.post.title}`,
+                        description: props.post.content.slice(0, 120) + '...'
+                    }}
+                />
                 <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
                     
                     <div className="lg:w-1/2 flex flex-col p-4">
@@ -62,19 +74,22 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: {params: {id: any}}) {
     const posts = await getPosts()
     const post = posts.find((val) => val.id === params.id);
+    const banner_image = post?.content.match(/(https?:\/\/.*\.(?:png|jpg))/i)?.at(0);
 
+    console.log(banner_image);
 
     if(!post) {
         return {
             props: {
-                post: null
+                post: null,
             }
         }
     }
 
     return {
         props: {
-            post
+            post,
+            banner_image
         }
     }
 }
