@@ -28,7 +28,7 @@ sorun erkeğin penisi kesilince kutlama, kız adet olunca ayıplamamızdır, kad
 
 ülkemizde belki de yüzbinlerce kadın ailesi, arkadaşları, iş arkadaşları tarafından taciz ediliyor. biz bu kadınların hikayesini bilmiyoruz, çünkü umursamıyoruz.
 
-bilmiyoruz, belki de yüzbinlerce kadın hayallerini gerçekleştirmeye "**adım**" bile atamıyor. bilmiyoruz belki yüzbinlercesi tacize belki çok daha kötüsü tecavüze uğruyor ama konuşmaya korkuyor, tehdit ediliyor. bir çoğunun hikayesini de bilmiyoruz ve bilemeyeceğiz gibi görünüyor.
+bilmiyoruz, belki de yüzbinlerce kadın hayallerini gerçekleştirmeye "**adım**" bile atamıyor. bilmiyoruz belki yüzbinlercesi tacize belki çok daha kötüsü tecavüze uğruyor ama konuşmaya korkuyor, tehdit ediliyor. birçoğunun hikayesini de bilmiyoruz ve bilemeyeceğiz gibi görünüyor.
 
 ## peki bu sorunu nasıl çözeriz?
 biliyorum, bunu cevap verebilecek yeterli bilgi birikimine sahip değilim. belki bana düşmez ama fikir hürriyeti hepimizin insan hakkıdır.
@@ -37,4 +37,4 @@ toplum olarak aileden başlayarak gelecek nesilleri -kaldı ki eğitim ailede ba
 
 meclise, kamuya cinsiyet kotası koymalıyız. kadın istismarı suçlarına daha caydırıcı yaptırımlar eklemeliyiz. pozitif ayrımcılık uygulamalayız.
 
-eğer en basitinden yakın geleccekte bunları bile yapmazsak, daha çok kadın cinayetleri ve kaybolmuş ve duyulmamış hayatlar göreceğiz gibi görünüyor...
+eğer en basitinden yakın gelecekte bunları bile yapmazsak, daha çok kadın cinayetleri ve kaybolmuş ve duyulmamış hayatlar göreceğiz gibi görünüyor...  
