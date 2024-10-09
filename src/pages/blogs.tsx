@@ -25,7 +25,7 @@ export default function Page(props: {
                 <div className="header flex flex-col lg:mb-4">
                     <span className="font-mono text-2xl font-bold">blogs</span>
                     <span className="font-mono text-xs mt-1">{'my personal blogs' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                    <span className="font-mono text-xs">{'subject: biography'}</span>
+                    <span className="font-mono text-xs">{'subject: blogs'}</span>
                 </div>
             </div>
 
