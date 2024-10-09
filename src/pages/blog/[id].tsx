@@ -36,6 +36,11 @@ export default function Page(props: {
                         title: `egely.me | ${props.post.title}`,
                         description: props.post.content.slice(0, 120) + '...'
                     }}
+                    twitter={{
+                        handle: '@egely48',
+                        site: '@egely.me',
+                        cardType: 'summary_large_image',
+                    }}
                 />
                 <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
                     
