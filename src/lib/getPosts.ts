@@ -35,6 +35,6 @@ export async function getPosts(): Promise<IPost[]> {
             //@ts-ignore
             if(a.date < b.date) return 1;
             else return 0;
-        })))
+        }).reverse()))
     })
 }

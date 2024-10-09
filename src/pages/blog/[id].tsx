@@ -74,9 +74,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: {params: {id: any}}) {
     const posts = await getPosts()
     const post = posts.find((val) => val.id === params.id);
-    const banner_image = post?.content.match(/(https?:\/\/.*\.(?:png|jpg))/i)?.at(0);
-
-    console.log(banner_image);
+    const banner_image = post?.content.match(/(https?:\/\/.*\.(?:png|jpg|jpeg))/i)?.at(0);
 
     if(!post) {
         return {
