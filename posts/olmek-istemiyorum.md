@@ -20,6 +20,8 @@ son yaşanan olay bir gerçeği daha bize tekrardan hatırlattı: kadın cinayet
 
 aslında toplum olarak sorunu direkt olarak "**cinayet**" kavramına bağlıyoruz, ama ben bunu çok yanlış buluyorum.
 
+bana kalırsa kadın cinayetleri bir sebep değil, sonuçtur. toplumsal hatalarımızın bir felaketi.
+
 sorun ülkemizde **patriyarka** (ataerkil) anlayışın devam etmesidir. kadınları erkeklerden aşağı görmemizdir.
 
 sorun cinsiyetçi argo kelimeleri ağzımıza dolayıp (malesef bende dahil) bunu normalleştirmemizdir, kadının evlenmesi gerektiğini düşünmemizdir, kadın çalışmaz anlayışıdır.
