@@ -4,7 +4,7 @@ date: '2024-10-09'
 author: 'egely'
 ---
 
-gün geçmiyorki yüce vatanımızda güzel bir haberle, olayla uyanalım, uyuyalım. ama ne yazık ki bir korkunç cinayet haberiyle uyandık.
+gün geçmiyor ki yüce vatanımızda güzel bir haberle, olayla uyanalım, uyuyalım. ama ne yazık ki korkunç bir cinayet haberiyle uyandık.
 bu cinayetlerin bazı "dikkat" çekici olanları bir hafta gündemde duruyor, bazı cinayetlere kurban giden kadınların hikayelerini hiç bilmiyoruz bile.
 
 ![](https://ankahaber.net/public/upload/Haber/199298/199298.jpeg)
