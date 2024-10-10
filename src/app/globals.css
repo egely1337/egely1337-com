@@ -6,7 +6,6 @@
 @tailwind components;
 @tailwind base;
 
-
 .markdown > * {
     all: revert;
 }
