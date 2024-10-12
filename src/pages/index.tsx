@@ -21,7 +21,7 @@ export default function Page(props: {
         <>
         <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
             <Head>
-                <title>egely.me | Home</title>
+                <title>egely.me | ev</title>
             </Head>
 
             <div className={"lg:w-1/2 flex flex-col p-4 "}>
@@ -38,8 +38,8 @@ export default function Page(props: {
                         />
                         <div className="flex flex-col">
                             <span className="font-mono text-xl font-bold">egely</span>
-                            <span className="font-mono text-xs mt-1">{'date' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                            <span className="font-mono text-xs">{'subject: biography'}</span>
+                            <span className="font-mono text-xs mt-1">{'tarih' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
+                            <span className="font-mono text-xs">{'konu: biyografi'}</span>
                         </div>
                     </div>
                 </div>
@@ -52,11 +52,11 @@ export default function Page(props: {
 
                 <div className="w-full flex justify-center lg:items-center mt-8">
                     <div className="w-full grid lg:grid-cols-5 sm:grid-cols-4 grid-cols-3 underline font-mono gap-12 sm:text-base text-xs">
-                        <Link href={`https://x.com/egely48`}>📷 Instagram</Link>
-                        <Link href={`https://x.com/egely48`}>🐤 Twitter</Link>
-                        <Link href={`https://github.com/egely1337`}>🐈 GitHub</Link>
-                        <Link href={`/gallery`}>🖼️ Gallery</Link>
-                        <Link href={`/blogs`}>📝 Blogs</Link>
+                        <Link href={`https://x.com/egely48`}>📷 insta</Link>
+                        <Link href={`https://x.com/egely48`}>🐤 twitter</Link>
+                        <Link href={`https://github.com/egely1337`}>🐈 github</Link>
+                        <Link href={`/gallery`}>🖼️ gallery</Link>
+                        <Link href={`/blogs`}>📝 blogs</Link>
                     </div>
                 </div>
 

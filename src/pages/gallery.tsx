@@ -17,14 +17,14 @@ export default function Page() {
     return(
         <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
             <Head>
-                <title>egely.me | Gallery</title>
+                <title>egely.me | galeri</title>
             </Head>
 
             <div className="lg:w-1/2 flex flex-col p-4">
                 <div className="header flex flex-col mb-4">
-                    <span className="font-mono text-2xl font-bold">gallery</span>
-                    <span className="font-mono text-xs mt-1">{'date' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                    <span className="font-mono text-xs">{'subject: gallery'}</span>
+                    <span className="font-mono text-2xl font-bold">galeri</span>
+                    <span className="font-mono text-xs mt-1">{'tarih' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
+                    <span className="font-mono text-xs">{'konu: galeri'}</span>
                 </div>
                 <div className="grid grid-cols-1 gap-2">
                     {images.map((val, i) => <img src={val} className="w-full h-full object-cover" key={i}/>)}

@@ -18,14 +18,14 @@ export default function Page(props: {
         <>
         <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
             <Head>
-                <title>egely.me | Blogs</title>
+                <title>egely.me | bloglar</title>
             </Head>
             
             <div className="lg:w-1/2 w-full flex flex-col p-4">
                 <div className="header flex flex-col lg:mb-4">
-                    <span className="font-mono text-2xl font-bold">blogs</span>
-                    <span className="font-mono text-xs mt-1">{'my personal blogs' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                    <span className="font-mono text-xs">{'subject: blogs'}</span>
+                    <span className="font-mono text-2xl font-bold">bloglar</span>
+                    <span className="font-mono text-xs mt-1">{'tarih' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
+                    <span className="font-mono text-xs">{'konu: bloglar'}</span>
                 </div>
             </div>
 
