@@ -55,8 +55,8 @@ export default function Page(props: {
                         <Link href={`https://x.com/egely48`}>📷 insta</Link>
                         <Link href={`https://x.com/egely48`}>🐤 twitter</Link>
                         <Link href={`https://github.com/egely1337`}>🐈 github</Link>
-                        <Link href={`/gallery`}>🖼️ gallery</Link>
-                        <Link href={`/blogs`}>📝 blogs</Link>
+                        <Link href={`/gallery`}>🖼️ galeri</Link>
+                        <Link href={`/blogs`}>📝 bloglar</Link>
                     </div>
                 </div>
 
