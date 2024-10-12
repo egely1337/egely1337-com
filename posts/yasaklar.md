@@ -37,4 +37,4 @@ rdından sistem tepsisine gelin ve cloudflare ikonuna tıklayın. o kısımdan d
 goodbyedpi yazılımı, otoriter internet servis sağlayıcınızın belirli web sitelerine erişmek isteyen derin paket inceleme (deep packet inspection) sistemlerini atlatmak için kullanılan bir yazılımdır.
 
 ## Nasıl kullanılır?
-öncelikle <ins><span style="color:blue"></ins>[_bu adrese_]</span>(https://github.com/ValdikSS/GoodbyeDPI/releases) gidin ve zip arşivinden çıkartıp sisteminize göre x86 ve x86_64 klasöründeki goodbyedpi.exe'yi yönetici izni vererek çalıştırın. bu adımları tamamladığınızda bir konsol ekranı geldiyse işlemleri başarıyla gerçekleştirmişsiniz demektir.
+öncelikle [_bu adrese_](https://github.com/ValdikSS/GoodbyeDPI/releases) gidin ve zip arşivinden çıkartıp sisteminize göre x86 ve x86_64 klasöründeki goodbyedpi.exe'yi yönetici izni vererek çalıştırın. bu adımları tamamladığınızda bir konsol ekranı geldiyse işlemleri başarıyla gerçekleştirmişsiniz demektir.
