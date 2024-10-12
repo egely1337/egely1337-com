@@ -22,14 +22,14 @@ export default function Page(props: {
             </Head>
             
             <div className="lg:w-1/2 w-full flex flex-col p-4">
-                <div className="header flex flex-col lg:mb-4 border-b border-black pb-4 border-opacity-50">
+                <div className="header flex flex-col border-b border-black pb-4 border-opacity-20">
                     <span className="font-mono text-2xl font-bold">bloglar</span>
                     <span className="font-mono text-xs mt-1">{'tarih' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
                     <span className="font-mono text-xs">{'konu: bloglar'}</span>
                 </div>
             </div>
 
-            <div className="lg:w-1/2 flex flex-col p-4 gap-5">
+            <div className="lg:w-1/2 flex flex-col px-4 gap-5">
                 {props.posts.map((val) => {
                     return(
                         <div key={val.title} className="flex flex-col font-mono items-start border-b pb-5">

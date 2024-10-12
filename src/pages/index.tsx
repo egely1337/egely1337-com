@@ -25,8 +25,8 @@ export default function Page(props: {
             </Head>
 
             <div className={"lg:w-1/2 flex flex-col p-4 "}>
-                <div className="header flex flex-col mb-4">
-                    <div className="flex items-center gap-2 mb-2 border-b border-black pb-4 border-opacity-50">
+                <div className="header flex flex-col">
+                    <div className="flex items-center gap-2 mb-2 border-b border-black pb-4 border-opacity-20">
                         <Image
                             src={avatar}
                             width={48}
