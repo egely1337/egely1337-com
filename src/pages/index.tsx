@@ -1,24 +1,21 @@
 import Grid from "@/components/grid";
 import InfoBox from "@/components/info";
 import Head from "next/head";
-import Link from "next/link";
-import React from "react";
 import Image from 'next/image';
+import Link from "next/link";
 
-import avatar from '../../public/egely-avatar.jpg';
+import getMarkdown from "@/lib/getMarkdown";
 import { useTheme } from "@/util/ThemeProvider";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import Markdown from "react-markdown";
+import avatar from '../../public/egely-avatar.jpg';
 
 
-
-
-export default function Page() {
+export default function Page(props: {
+        markdown: string
+    }
+) {
     const theme = useTheme();
-
-    const paragraphs: string[] = 
-        ["Hi, I'm Ege. As a person who doesn't like to talk much, I'll be brief. I'm of legal age, interested in software and politics. I spent most of my life in software. I don't regret it either. I have experience in C, C++, C#, Python, Javascript, Typescript languages and Web, OpenGL. In my free time I like to do difficult things from scratch. Sometimes I act toxic and sometimes normal. We are all human after all. Sometimes I watch anime, usually romantic anime. Am I ashamed of it? Yes. Anyway, you can see my social media and internet links below. You can reach me from there. By the way, \
-        if you noticed, the site is very simple; Yes, I like simplicity. Have a good day!!!",
-        "On the political compass, I see myself as libertarian center-left. I don't usually put it like that, I call myself a direct democrat.  I find laissez-faire, freedom of speech, participatory democracy right. In software, I support and contribute to free software. "
-        ];
 
     return( 
         <>
@@ -48,11 +45,9 @@ export default function Page() {
                 </div>
 
                 <div className="flex flex-col gap-8">
-                    {paragraphs.map((val, i) =>
-                        <p key={i} className="font-mono">
-                            {val}
-                        </p>
-                    )}
+                    <Markdown className={"markdown font-mono"}>
+                        {props.markdown}
+                    </Markdown>
                 </div>
 
                 <div className="w-full flex justify-center lg:items-center mt-8">
@@ -80,4 +75,12 @@ export default function Page() {
         </div>
         </>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx: GetServerSidePropsContext) => {
+    return {
+        props: {
+            markdown: getMarkdown('me.md')
+        }
+    }
 }

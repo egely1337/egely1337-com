@@ -4,7 +4,7 @@ export default function getText(text: string) {
         return `${
             text
             .split(" ")
-            .slice(0, 15)
+            .slice(0, 20)
             .join(' ')
             .replace(',', '')}...`
     }
