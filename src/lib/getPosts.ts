@@ -1,11 +1,12 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import moment from 'moment';
 
 
 interface IPost {
     title: string,
-    date: string,
+    date: moment.Moment,
     content: string,
     id: string,
     author: string
@@ -16,25 +17,28 @@ export async function getPosts(): Promise<IPost[]> {
         const postsDirectory = path.join(process.cwd(), 'posts');
         const fileNames = fs.readdirSync(postsDirectory);
         
-        const allPostsData = fileNames.map((file) => {
+        const allPostsData: IPost[] = fileNames.map((file) => {
             const id = file.replace(/\.md$/, '');
             const fullPath = path.join(postsDirectory, file);
             const fileContent = fs.readFileSync(fullPath, 'utf8');
-            
+        
+
             const matterResult = matter(fileContent);
+        
             const content = matterResult.content;
             return {
                 id,
                 content,
-                ...matterResult.data,
+                author: matterResult.data.author,
+                date: moment(matterResult.data.date),
+                title: matterResult.data.title
             }
         })
 
-        //@ts-ignore
-        resolve((allPostsData.sort((a, b) => {
-            //@ts-ignore
-            if(a.date < b.date) return 1;
-            else return 0;
-        }).reverse()))
-    })
+        const sorted = allPostsData.sort((a, b) => b.date.diff(a.date));
+        const json: IPost[] = JSON.parse(JSON.stringify(sorted))
+
+        resolve(json);
+    }
+)
 }

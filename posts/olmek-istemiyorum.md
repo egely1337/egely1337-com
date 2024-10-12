@@ -27,7 +27,7 @@ asıl sorun sorun ülkemizde **patriyarka** (ataerkil) anlayışın devam etmesi
 sorun cinsiyetçi argo kelimeleri ağzımıza dolayıp (malesef bende dahil) bunu normalleştirmemizdir, kadının evlenmesi gerektiğini düşünmemizdir, kadın çalışmaz anlayışıdır.
 
 sorun erkeğin penisi kesilince kutlama, kız adet olunca ayıplamamızdır, kadının eğitim almasına karşı olmamızdır. 
-
+                
 ülkemizde belki de yüzbinlerce kadın ailesi, arkadaşları, iş arkadaşları tarafından taciz ediliyor. biz bu kadınların hikayesini bilmiyoruz, çünkü umursamıyoruz.
 
 bilmiyoruz, belki de yüzbinlerce kadın hayallerini gerçekleştirmeye "**adım**" bile atamıyor. bilmiyoruz belki yüzbinlercesi tacize belki çok daha kötüsü tecavüze uğruyor ama konuşmaya korkuyor, tehdit ediliyor. birçoğunun hikayesini de bilmiyoruz ve bilemeyeceğiz gibi görünüyor.
