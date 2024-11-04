@@ -51,7 +51,7 @@ export default function Page(props: {
                 </div>
 
                 <div className="w-full flex justify-center lg:items-center mt-8">
-                    <div className="w-full grid lg:grid-cols-5 sm:grid-cols-4 grid-cols-3 underline font-mono gap-12 sm:text-base text-xs">
+                    <div className="w-full grid lg:grid-cols-4 sm:grid-cols-4 grid-cols-3 underline font-mono gap-12 sm:text-base text-xs">
                         <Link href={`mailto:contact@egely.me`}>📧 postalaş</Link>
                         <Link href={`https://github.com/egely1337`}>🐈 github</Link>
                         <Link href={`/gallery`}>🖼️ galeri</Link>
