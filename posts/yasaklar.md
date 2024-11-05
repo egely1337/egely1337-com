@@ -34,6 +34,7 @@ c
 rdından sistem tepsisine gelin ve cloudflare ikonuna tıklayın. o kısımdan da sunucuya bağlanın ve özgürlüğünüze sahip olun.
 # 2. GoodbyeDPI
 ![](https://opengraph.githubassets.com/7cc05cd5a602a88bfa370f0fc55974e46b856e56246ee2b67a25f1fa220c8d54/ValdikSS/GoodbyeDPI)
+
 goodbyedpi yazılımı, otoriter internet servis sağlayıcınızın belirli web sitelerine erişmek isteyen derin paket inceleme (deep packet inspection) sistemlerini atlatmak için kullanılan bir yazılımdır.
 
 ## Nasıl kullanılır?

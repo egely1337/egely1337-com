@@ -12,7 +12,7 @@ export default function Grid(props: {
             <div className={`
                 absolute inset-0 
                 -z-10 h-full 
-                w-full ${(theme.theme === 'LIGHT') ? 'bg-white' : 'bg-[#252526]'}
+                w-full
                 duration-300
                 ease-in 
                 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),

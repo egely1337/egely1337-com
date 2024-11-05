@@ -11,7 +11,25 @@ export const ThemeContext = React.createContext<IThemeContext | null>(null);
 export default function ThemeProvider(props: {
     children: React.ReactNode
 }) {
-    const [theme, setTheme] = React.useState<"DARK" | "LIGHT">('LIGHT');
+    const [theme, setTheme] = React.useState<"DARK" | "LIGHT">('DARK');
+
+    React.useEffect(() => {
+        switch(theme) {
+            case 'DARK': {
+                document.body.style.backgroundColor = '#0E1011';
+                document.body.style.color = 'white';
+                break;
+            }
+            case 'LIGHT': {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    }, [theme])
 
     return(
         <ThemeContext.Provider 
@@ -23,7 +41,7 @@ export default function ThemeProvider(props: {
             }}
 
         >
-            <div className={theme === 'DARK' ? 'text-white' : 'text-black'}>
+            <div>
                 {props.children}
             </div>
         </ThemeContext.Provider>

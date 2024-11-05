@@ -1,9 +1,9 @@
 import Grid from "@/components/grid";
 import KernelPanic from "@/components/kernel-panic";
+import Layout from "@/components/layout";
 import { getPosts } from "@/lib/getPosts";
-import Head from "next/head";
-import Markdown from "react-markdown";
 import { NextSeo } from "next-seo";
+import Markdown from "react-markdown";
 
 export default function Page(props: {
     post: {
@@ -22,7 +22,7 @@ export default function Page(props: {
         )
     } else {
         return(
-            <>
+            <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
                 <NextSeo
                     title={`egely.me | ${props.post.title}`}
                     description={props.post.content.slice(0, 120) + '...'}
@@ -42,21 +42,18 @@ export default function Page(props: {
                         cardType: 'summary_large_image',
                     }}
                 />
-                <div className="lg:p-8 p-2 w-full flex flex-col justify-center items-center">
-                    
-                    <div className="lg:w-1/2 flex flex-col p-4">
-                        <div className="header flex flex-col">
-                            <span className="font-mono text-2xl font-bold">{props.post.title}</span>
-                            <span className="font-mono text-xs mt-1">{'tarih' + ': ' + props.post.date}</span>
-                            <span className="font-mono text-xs">{`yazar: ${props.post.author}`}</span>
-                        </div>
-
-                        <Markdown className={`markdown font-mono`}>{props.post.content}</Markdown>
+                
+                <Layout>
+                    <div className="header flex flex-col">
+                        <span className="font-mono text-2xl font-bold">{props.post.title}</span>
+                        <span className="font-mono text-xs mt-1">{'tarih' + ': ' + props.post.date}</span>
+                        <span className="font-mono text-xs">{`yazar: ${props.post.author}`}</span>
                     </div>
 
-                    <Grid/>
-                </div>
-            </>
+                    <Markdown className={`markdown font-mono`}>{props.post.content}</Markdown>
+                </Layout>
+                <Grid/>
+            </div>
         )
     }
 }
