@@ -55,6 +55,10 @@ export default function ThemeProvider(props: {
             }}
 
         >
+            <ReactHotkeys
+                keyName="shift+a"
+                onKeyDown={() => toggleTheme()}
+            />
             <div>
                 {props.children}
             </div>
