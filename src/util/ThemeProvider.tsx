@@ -55,10 +55,6 @@ export default function ThemeProvider(props: {
             }}
 
         >
-            <ReactHotkeys
-                keyName="ctrl"
-                onKeyDown={() => toggleTheme()}
-            />
             <div>
                 {props.children}
             </div>
