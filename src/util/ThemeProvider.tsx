@@ -1,4 +1,5 @@
 import React from "react";
+import ReactHotkeys from "react-hot-keys";
 
 
 export interface IThemeContext {
@@ -12,6 +13,19 @@ export default function ThemeProvider(props: {
     children: React.ReactNode
 }) {
     const [theme, setTheme] = React.useState<"DARK" | "LIGHT">('DARK');
+
+    async function toggleTheme() {
+        switch(theme) {
+            case 'DARK':
+                setTheme('LIGHT');
+                break;
+            case 'LIGHT':
+                setTheme('DARK');
+                break;
+            default:
+                break;
+        }
+    }
 
     React.useEffect(() => {
         switch(theme) {
@@ -41,6 +55,10 @@ export default function ThemeProvider(props: {
             }}
 
         >
+            <ReactHotkeys
+                keyName="ctrl"
+                onKeyDown={() => toggleTheme()}
+            />
             <div>
                 {props.children}
             </div>
