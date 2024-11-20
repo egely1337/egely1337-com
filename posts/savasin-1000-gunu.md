@@ -22,8 +22,6 @@ ukrayna rusya savaşı üzerinden bin gün geçti, ukrayna rusya savaşı üzeri
 
 ![](https://preview.redd.it/1-000-days-of-war-in-ukraine-captured-in-images-v0-3wfsdfqhqa1e1.jpg?width=2720&format=pjpg&auto=webp&s=6126513990279f20b8d011fcdb597df061dc20c7)
 
-![](https://preview.redd.it/1-000-days-of-war-in-ukraine-captured-in-images-v0-3wfsdfqhqa1e1.jpg?width=2720&format=pjpg&auto=webp&s=6126513990279f20b8d011fcdb597df061dc20c7)
-
 ![](https://cepa.org/wp-content/uploads/2022/09/2022-03-06T124137Z_1358495640_RC2VWS9C4KI0_RTRMADP_3_UKRAINE-CRISIS-IRPIN.jpg)
 
 ![](https://archive-images.prod.global.a201836.reutersmedia.net/2023/04/03/2023-04-03T155803Z_22270_MRPRC2PDT9206D3_RTRMADP_0_UKRAINE-CRISIS-MARIUPOL.JPG)
