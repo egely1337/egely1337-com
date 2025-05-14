@@ -15,6 +15,8 @@ her X'te (eskiden twitter) gönderi paylaştığımızda resmen elon musk'ın be
 
 bugünün teknoloji devlerinin ürünlerini düşünün mesela google maps'i düşünün, siz bir trafik olduğu zaman bunu google'ın sistemlerine bildiriyorsunuz, aslında google'ın ürününü bedava bir şekilde geliştiriyorsunuz.
 
+![](https://static1.thetravelimages.com/wordpress/wp-content/uploads/2023/04/google-headquarters-mountain-view-california.jpg)
+
 mesela instagram olsun, reelsleri düşünün, tiktok'u düşünün. kaydırıyorsunuz, kaydırıyorsunuz aslında para ödemiyorsunuz değil mi? ödüyoruz, zamanımızla ödüyoruz. her kaydırdığımızda bir reklam görüyoruz, aktifliği arttırıyoruz. kelimenin tam anlamıyla serf oluyoruz.
 
 zoom üzerinden yapılan bir röportajda varoufakis'e teknoloji devlerinin ekonomiyi nasıl değiştirdiği hakkında bazı sorular soruluyor.
