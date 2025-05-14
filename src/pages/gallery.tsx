@@ -21,10 +21,10 @@ export default function Page() {
             </Head>
 
             <div className="lg:w-1/2 flex flex-col p-4">
-                <div className="header flex flex-col">
-                    <span className="font-mono text-2xl font-bold">galeri</span>
-                    <span className="font-mono text-xs mt-1">{'tarih' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
-                    <span className="font-mono text-xs">{'konu: galeri'}</span>
+                <div className="header flex flex-col mb-4">
+                    <span className="font-mono text-3xl font-bold">galeri</span>
+                    <span className="font-mono mt-1">{'tarih' + ': ' + `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getFullYear()}`}</span>
+                    <span className="font-mono">{'konu: galeri'}</span>
                 </div>
                 <div className="grid grid-cols-1 gap-2">
                     {images.map((val, i) => <img src={val} className="w-full h-full object-cover" key={i}/>)}

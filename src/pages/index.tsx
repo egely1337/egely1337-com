@@ -24,7 +24,7 @@ export default function Page(props: {
 
             <Layout>
                 <MyInfo/>
-                <Markdown className={"markdown font-mono"}>
+                <Markdown className={"markdown font-mono text-xl"}>
                     {props.markdown}
                 </Markdown>
 

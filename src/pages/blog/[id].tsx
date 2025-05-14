@@ -45,12 +45,12 @@ export default function Page(props: {
                 
                 <Layout>
                     <div className="header flex flex-col">
-                        <span className="font-mono text-2xl font-bold">{props.post.title}</span>
-                        <span className="font-mono text-xs mt-1">{'tarih' + ': ' + props.post.date}</span>
-                        <span className="font-mono text-xs">{`yazar: ${props.post.author}`}</span>
+                        <span className="font-mono text-3xl font-bold">{props.post.title}</span>
+                        <span className="font-mono mt-1">{'tarih' + ': ' + props.post.date}</span>
+                        <span className="font-mono">{`yazar: ${props.post.author}`}</span>
                     </div>
 
-                    <Markdown className={`markdown font-mono`}>{props.post.content}</Markdown>
+                    <Markdown className={`markdown font-mono text-xl`}>{props.post.content}</Markdown>
                 </Layout>
                 <Grid/>
             </div>

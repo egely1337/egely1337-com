@@ -6,7 +6,7 @@ export default function CustomLink(props: {
     text: string
 }) {
     return(
-        <div className="flex lg:items-center lg:justify-center">
+        <div className="flex lg:items-center lg:justify-center text-xl">
             <Link href={props.href}>{props.text}</Link>
         </div>
     )
