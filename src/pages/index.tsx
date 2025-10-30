@@ -32,7 +32,6 @@ export default function Page(props: {
                     <div className="w-full grid lg:grid-cols-4 sm:grid-cols-4 grid-cols-2 underline font-mono gap-12 sm:text-base text-xs">
                         <CustomLink href="mailto:contact@egely.me" text="📧 postalaş"/>
                         <CustomLink href={`https://github.com/egely1337`} text="🐈 github"/>
-                        <CustomLink href={`/gallery`} text="🖼️ galeri"/>
                         <CustomLink href={`/blogs`} text="📝 bloglar"/>
                     </div>
                 </div>
