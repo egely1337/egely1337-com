@@ -1,8 +1,6 @@
 merhaba, ben ege. 19 yaşındayım ve izmir'de yaşıyorum. bilgisayar bilimleriyle, politikayla ilgileniyorum.
 
-geçmişimde birçok proje ile uğraştım. bilgisayar bilimlerinin ne kadar ilgi çekici olduğunu bu uğraştığım projelerde öğrendim.
-
-siyasi eksen olarak sosyal demokratım. keynesyen ekonomiyi hakikat olarak bilirim.  
+ilgi alanlarım hakkında mini projeler ve deneyler yapmayı seviyorum.
 
 bir konuda sohbet etmek, danışmak isterseniz de aşağıdaki e-mail bağlantımdan e-mail gönderin.
 
