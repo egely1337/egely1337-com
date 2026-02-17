@@ -36,7 +36,7 @@ export default function Page(props: {
                     return(
                         <div key={val.title} className={"flex flex-col font-mono items-start pb-5 " + `${theme.theme === 'DARK' ? "border-white" : "border-black"}`}>
                             <h1 className="text-2xl font-bold">{val.title}<span className="font-normal text-sm"></span></h1>
-                            <span className="text-base">{'@' +val.author + ' ' + '·' + ' ' + val.date}</span>
+                            <span className="text-base">{'@' +val.author + ' ' + '·' + ' ' + (val.date)}</span>
                             <Markdown  className={'mt-1 text-xl break-words markdown'}>
                                 {getText(val.content)}
                             </Markdown>
