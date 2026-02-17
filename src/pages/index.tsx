@@ -29,7 +29,7 @@ export default function Page(props: {
                 </Markdown>
 
                 <div className="w-full flex justify-center lg:items-center mt-8">
-                    <div className="w-full grid lg:grid-cols-3 sm:grid-cols-3 grid-cols-2 underline font-mono gap-12 sm:text-base text-xs">
+                    <div className="w-full grid lg:grid-cols-4 sm:grid-cols-4 grid-cols-2 underline font-mono gap-12 sm:text-base text-xs">
                         <CustomLink href="mailto:contact@egely.me" text="📧 postalaş"/>
                         <CustomLink href={`https://github.com/egely1337`} text="🐈 github"/>
                         <CustomLink href={`/blogs`} text="📝 bloglar"/>
