@@ -22,6 +22,4 @@ başta dediğim gibi, dünya artık eskisi gibi değil. ifade özgürlüğü, ka
 
 insan ırkı hiçbir zaman geçmişten ders çıkarmadı, bugün de, yarın da çıkarmayacak. onlar yarı-feodal bir düzen inşaa edip ruhumuz fark etmeden fikirlerimizi değiştirecekler. onların düşünmemizi istediği şeyleri düşüneceğiz. nefret etmemizi istedikleri şeyden nefret edeceğiz, fayda sağlamamızı istedikleri şeye fayda sağlayacağız, köle olacağız.
 
-*No one had taught us how to be free. We had only ever been taught how to die for freedom.*
-
 ![](https://none.jpeg)
