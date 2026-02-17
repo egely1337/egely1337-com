@@ -33,6 +33,7 @@ export default function Page(props: {
                         <CustomLink href="mailto:contact@egely.me" text="📧 postalaş"/>
                         <CustomLink href={`https://github.com/egely1337`} text="🐈 github"/>
                         <CustomLink href={`/blogs`} text="📝 bloglar"/>
+                        <CustomLink href={`https://open.spotify.com/user/31msbfmapv2cvtaohbpxwxypznxm?si=qtDxVctHTBe7erduSh-8Hg`} text="🥬 spotify"/>
                     </div>
                 </div>
 
